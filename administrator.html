@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="sr">
+    
+    <head>
+        <title>XY travel- Administrator</title>
+        <meta charset = "utf-8">
+        <meta name = "viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit = no">
+        <meta http-equiv = "X-UA-Compatible" content = "IE=edge">
+        <link rel = "icon" href = "https://ik.imagekit.io/mnyplybq4/travel_m_s2l7yy849y.png">
+
+        <!-- Google font linkovi -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Raleway:wght@300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        
+
+        <!-- Custom css link-->
+        <link rel = "stylesheet" href = "css/style.css">
+    </head>
+<body>
+
+        <!-- Navigacija-->
+        <header>
+            <div class="navbar-fixed">
+                <nav>
+                    <!--Hamburger ikonica za sidebar-->
+                    <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                    <div class = "nav-wrapper">
+                        <a class = "brand-logo" href = "index.html">
+                            <img class="logo-img" src = "https://ik.imagekit.io/mnyplybq4/travel_m_s2l7yy849y.png" alt = "Logo">
+                            <p class = "bigger-font dancing-font">Some xy Travel</p>
+                        </a>
+                        <ul class=" hide-on-med-and-down right margin-right">
+                            <li><a href="index.html">Početna</a></li>
+                            <li class = "active"><a href="#!">Administrator</a></li>
+                            <li id = "acc"><a>Nalog</a></li>
+                            <li id = "login-btn"><a class=" waves-effect btn dark-pink modal-trigger" href="#modal-prijava"></a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+    
+            <!--Sidebar koji se aktivira kada se navigacija dovoljno smanji-->
+            <ul class="sidenav" id="mobile-demo">
+                <li><a href="index.html">Početna</a></li>
+                <li><a href="#!">Administrator</a></li>
+                <li id = "acc-side"><a>Nalog</a></li>
+                <li id = "login-side"><a class = "modal-trigger" href="#modal-prijava"></a></li>
+            </ul> 
+        </header>
+    
+    
+        <!--Pop up forma za registraciju/prijavu-->
+        <div id="modal-prijava" class = "modal">
+            <div class="modal-content center">
+                <div class = "flex-on-resize">
+                    <h3>Prijava/Registracija</h3>
+                </div>
+                <ul class="collapsible" id = "modal-tabs">
+                    <li class = "no-float">
+    
+                        <!--Forma za prijavu-->
+                        <div class="collapsible-header">Prijava</div>
+                        <div class="collapsible-body white">
+                            <div class = "flex">
+                                <form id = "prijava">
+                                    <div class = "row center">
+                                        <div class="input-field col s12 fixed-padding">
+                                            <i class="material-icons prefix">account_circle</i>
+                                            <input id="username_login" type="text">
+                                            <label for="username_login">Korisničko ime</label>
+                                            <span class="helper-text" data-error="" data-success=""> </span>
+                                        </div>
+                                    </div>
+        
+                                    <div class = "row center">
+                                        <div class="input-field col s12 fixed-padding">
+                                            <i class="material-icons prefix">vpn_key</i>
+                                            <input id="password_login" type="password">
+                                            <label for="password_login">Lozinka</label>
+                                            <span class="helper-text" data-error="" data-success=""> </span>
+                                        </div>
+                                    </div>
+                                </form>
+                                <button disabled type= "button" class="btn waves-effect dark-pink" id = "btn_login">Prijavi me</button>
+                            </div>
+                        </div>
+                    </li>
+    
+    
+                  <!--Forma za registraciju-->
+                    <li class = "no-float">
+                        <div class="collapsible-header">Registracija</div>
+                        <div class="collapsible-body white">
+                            <form id = "registracija">
+                                <div class="row">
+                                    <div class="input-field col s6 fixed-padding">
+                                        <i class="material-icons prefix">account_circle</i>
+                                        <input  id="first_name" type="text">
+                                        <label for="first_name">Ime</label>
+                                        <span class="helper-text" data-error="Greška" data-success="Tačno"> </span>
+                                    </div>
+    
+                                    <div class="input-field col s6 fixed-padding">
+                                        <i class="material-icons prefix">account_circle</i>
+                                        <input id="last_name" type="text">
+                                        <label for="last_name">Prezime</label>
+                                        <span class="helper-text" data-error="Greška" data-success="Tačno"> </span>
+                                    </div>
+                                </div>
+    
+                                <div class="row">
+                                    <div class="input-field col s6 fixed-padding">
+                                        <i class="material-icons prefix">account_circle</i>
+                                    <input id="username" type="text">
+                                    <label for="username">Korisničko ime</label>
+                                    <span class="helper-text" data-error="Greška" data-success="Tačno"> </span>
+                                    </div>
+    
+                                <div class="input-field col s6 fixed-padding">
+                                    <i class="material-icons prefix">vpn_key</i>
+                                    <input  id="pass" type="text">
+                                    <label for="pass">Lozinka</label>
+                                    <span class="helper-text" data-error="Greška" data-success="Tačno"> </span>
+                                </div>
+                                </div>
+    
+    
+                                <div class="row">
+                                    <div class="input-field col s6 fixed-padding">
+                                        <i class="material-icons prefix">date_range</i>
+                                        <input  id="birthdate" type="date">
+                                        <label for = "birthdate">Datum rođenja</label>
+                                         <span class="helper-text" data-error="Greška" data-success="Tačno"> </span>
+                                    </div>
+    
+                                    <div class="input-field col s6 fixed-padding">
+                                        <i class="material-icons prefix">email</i>
+                                        <input  id="email" type="email">
+                                        <label for="email">Email</label>
+                                        <span class = "helper-text" data-error="Greška" data-success="Tačno"> </span>
+                                    </div>
+                                </div>
+    
+                                <div class = "row">
+                                    <div class="input-field col s6 fixed-padding">
+                                        <i class="material-icons prefix">home</i>
+                                        <input id="address" type="text">
+                                        <label for ="address">Adresa</label>
+                                        <span class="helper-text" data-error="Greška" data-success="Tačno"> </span>
+                                    </div>
+    
+                                    <div class="input-field col s6 fixed-padding">
+                                        <i class="material-icons prefix">local_phone</i>
+                                        <input  id="tel-num" type="tel">
+                                        <label for="tel-num">Broj telefona</label>
+                                        <span class="helper-text" data-error="Greška" data-success="Tačno"> </span>
+                                    </div>
+                                </div>
+    
+                                <div class = "center flex-on-resize">
+                                    <button type = "button" class="btn waves-effect dark-pink margin-5" disabled  id = "registruj">Registruj me</button>
+                                    <button type = "button" class="btn waves-effect dark-pink margin-5" id = "otkazi">Otkaži</button>
+                                </div>
+                            </form>   
+                        </div>     
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    <!--Glavni sadrzaj-->
+    <main>
+        <div class="padded center">
+            <ul id="tabs-swipe-demo" class="tabs">
+                <li class="tab col s3"><a href="#ture" id = "ture-trigger">Sve ture u ponudi</a></li>
+                <li class="tab col s3"><a href="#korisnici" id = "korisnici-trigger">Svi korisnici</a></li>
+            </ul>
+            <br>
+           
+            <div id = "ture" class = "tab-padding overflow-all height-600">
+                <!-- Tabela sa svim dostupnim turama-->
+                <table class = " centered highlight">
+                    <thead>
+                        <tr>
+                            <th>Kod ture</th>
+                            <th>Naziv ture</th>
+                            <th>Tip ture</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id ="ture_table">
+                        
+                    </tbody>
+                </table>
+            </div>
+
+            <div id="modal-ture" class="modal">
+                <div class="modal-content small-padding-bottom">
+                    <h4>Podaci o turi</h4>
+                    <br>
+                    <form>
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <input value = " " disabled id="kod-ture" type="text">
+                                <label for="kod-ture" class = "active">Kod ture</label>
+                                <span class="helper-text" data-error="Greška" data-success="Tačno"> </span>
+                            </div>
+
+                            <div class="input-field col s6">
+                                <input disabled value = " " id="naziv-ture" type="text">
+                                <label  for="naziv-ture">Naziv ture</label>
+                                <span class="helper-text" data-error="Greška" data-success="Tačno"> </span>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <input disabled value = " " id="adresa-polaska" type="text">
+                                <label for="adresa-polaska">Adresa polaska</label>
+                                <span class="helper-text" data-error="Greška" data-success="Tačno"> </span>
+                            </div>
+
+                            <div class="input-field col s6">
+                                <input disabled value = "0" id="trajanje" type="number">
+                                <label for="trajanje">Trajanje (min)</label>
+                                <span class="helper-text" data-error="Greška" data-success="Tačno"> </span>
+                            </div>
+                        </div>
+
+
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <select id ="tip" disabled>
+                                    <option value="Pešačka tura" id="Pešačka tura">Pešačka tura</option>
+                                    <option value="Biciklistička tura" id="Biciklistička tura">Biciklistička tura</option>
+                                    <option value="Panoramsko razgledanje" id="Panoramsko razgledanje">Panoramsko razgledanje</option>
+                                    <option value="Krstarenje" id="Krstarenje">Krstarenje</option>
+                                </select>
+                                <label for="tip">Tip ture</label>
+                            </div>
+
+                            <div class="input-field col s6">
+                                <input disabled value = "0"  id="max-osoba" type="number">
+                                <label for="max-osoba">Maksimalnih mesta</label>
+                                <span class = "helper-text" data-error="Greška" data-success="Tačno"> </span>
+                            </div>
+                        </div>
+
+                        <div class = "row">
+                            <div class="input-field col s12">
+                                <textarea disabled class = "materialize-textarea" id="kratak-opis"> </textarea>
+                                <label for ="kratak-opis">Kratak opis</label>
+                                <span class="helper-text" data-error="Greška" data-success="Tačno"> </span>
+                            </div>
+                        </div>
+
+                        <div class= "row">
+                            <div class="input-field col s12">
+                                <textarea disabled id="detaljan-opis" class = "materialize-textarea"> </textarea>
+                                <label for ="detaljan-opis">Detaljan opis</label>
+                                <span class="helper-text" data-error="Greška" data-success="Tačno"> </span>
+                            </div>
+                        </div>
+
+                        <div class = "row">
+                            <div class="input-field col s6">
+                                <input disabled value = " " id="slika" type="text">
+                                <label for = "slika">Slika</label>
+                                <span class = "helper-text" data-error="Greška" data-success="Tačno"> </span>
+                            </div>
+
+                            <div class="input-field col s6">
+                                <input disabled  value = "0"  id="cena" type="number">
+                                <label for="cena">Cena po osobi (din)</label>
+                                <span class = "helper-text" data-error="Greška" data-success="Tačno"> </span>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <input disabled value = " "  id="prosecna-ocena" type="text">
+                                <label for = "prosecna-ocena">Prosečna ocena</label>
+                            </div>
+
+                            <div class="input-field col s6">
+                                <input disabled value = " "  id="ocene-korisnika" type="text">
+                                <label for="ocene-korisnika">Ocene korisnika</label>
+                                <span class = "helper-text" data-error="Greška" data-success="Tačno"> </span>
+                            </div>
+                        </div>
+                        
+                        <div class = "center flex-on-resize">
+                            <button type = "button" class="waves-effect waves-light btn dark-pink margin-5" href = "#!" id = "izmeni">Izmeni podatke</button>
+                            <button type = "button" class="waves-effect waves-light btn dark-pink margin-5 modal-trigger" href="#modal-potvrdi" id = "btnDel">Obriši turu</button>
+                        </div>
+                    </form>   
+                    <br>
+                </div>
+            </div>
+
+            <!--Potvrda brisanja ture-->
+            <div id="modal-potvrdi" class="modal">
+                <div class="modal-content center">
+                    <h4>Potvrda</h4>
+                    <p>Da li ste sigurni da želite da obrišete turu? Posle brisanja tura neće biti vidljiva na stranici.</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="#!" class="modal-close waves-effect waves-green btn-flat">Ne</a>
+                    <a href="#!" class="modal-close waves-effect waves-green btn-flat" id = "delete">Da, obriši turu</a>
+                </div>
+            </div>
+
+            <div id = "korisnici" class = "tab-padding overflow-all">
+                <table class = "centered highlight">
+                    <thead>
+                        <tr>
+                            <th>Korisničko ime</th>
+                            <th>Email</th>
+                            <th>Ime i prezime</th>
+                        </tr>
+                    </thead>
+            
+                    <tbody id="korisnici_table">
+
+                    </tbody>
+                </table>
+            </div>
+
+            
+            <div id="modal-korisnik" class="modal">
+                <div class="modal-content center small-padding-bottom">
+                    <h4>Podaci o korisniku</h4>
+                    <br>
+                    <form>
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <input disabled value = " " id="ime" type="text">
+                                <label for="ime">Ime</label>
+                            </div>
+
+                            <div class="input-field col s6">
+                                <input disabled  value = " " id="prezime" type="text">
+                                <label for="prezime">Prezime</label>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <input disabled value = " " id="korisnicko-ime" type="text">
+                                <label for="korisnicko-ime">Korisničko ime</label>
+                            </div>
+
+                            <div class="input-field col s6">
+                                <input disabled value = " " id="lozinka" type="password">
+                                <label for="lozinka">Lozinka</label>
+                            </div>
+                        </div>
+
+
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <input disabled value = " " id="datum-rodj" type="text">
+                                <label for = "datum-rodj">Datum rođenja</label>
+                            </div>
+
+                            <div class="input-field col s6">
+                                <input disabled value = "mail"  id="mail" type="email">
+                                <label for="mail">Email</label>
+                            </div>
+                        </div>
+
+                        <div class = "row">
+                            <div class="input-field col s6">
+                                <input disabled value = " " id="adresa" type="text">
+                                <label for ="adresa">Adresa</label>
+                            </div>
+
+                            <div class="input-field col s6">
+                                <input disabled value = " " id="telefon" type="tel">
+                                <label for="telefon">Broj telefona</label>
+                            </div>
+                        </div>
+                    </form>
+                </div> 
+            </div>
+        </div>
+    </main>
+
+<!--Footer-->
+    <footer class="page-footer">
+        <div class="row">
+            <div class="col s6 center">
+                <h4 class="white-text">XY Travel</h4>
+                <hr class = "white hr-smaller-width">
+                <div class = "left-align inline-block">
+                    <ul>
+                        <li><i class = "material-icons">access_time</i>Radno vreme: Ponedeljak-Petak: 08:00-20:00</li>
+                        <li>Subota: 09:00-18:00 Nedeljom ne radimo</li>
+                        <li><i class = "material-icons">home</i>Adresa: XYZ 160, Novi Sad</li>
+                        <li><i class = "material-icons">local_phone</i>Kontakt telefon: 021 123 456</li>
+                        <li><i class = "material-icons">mail</i>Mail: xytravel@mail.com</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col s6 center">
+                <h4 class="white-text">Pronađite nas</h4>
+                <hr class = "white hr-smaller-width">
+                <div class = "left-align inline-block">
+                    <ul class = "bigger-line-height">
+                        <li><a href="https://www.facebook.com/"><img src="https://img.icons8.com/android/96/ffffff/facebook-new.png" width = "24" alt = "Facebook"> Facebook: @XY.Travel</a></li>
+                        <li><a href="https://www.instagram.com/"><img src="https://img.icons8.com/metro/104/ffffff/instagram-new.png" width = "24" alt = "Instagram" > Instagram: @XY.Travel</a></li>
+                        <li><a href="https://www.twitter.com/"><img src="https://img.icons8.com/android/96/ffffff/twitter.png" width = "24" alt = "Twitter">Twitter: @XY.Travel</a></li>
+                        <li><a href="https://www.youtube.com/"><img src="https://img.icons8.com/material-rounded/96/ffffff/youtube-play.png" width = "24" alt = "Youtube">Youtube: @XY.Travel</a></li>           
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container center">© 2021 Made With Materialize</div>
+        </div>
+    </footer>
+
+<!--Dugme za povratak na pocetak stranice-->
+    <div class="fixed-action-btn">
+        <a class="btn-floating btn-large dark-pink tooltipped" id = "to-top-btn" data-position="top" data-tooltip="Početak stranice"><i class="large material-icons">arrow_upward</i></a>
+    </div>
+
+
+<!--Materialize js-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+<!--Zajednicka skripta-->
+<script src = "javascript/javascript.js"></script>
+
+<!--Custom skripta-->
+<script src = "javascript/administrator.js"></script>
+
+
+</body>
+</html>

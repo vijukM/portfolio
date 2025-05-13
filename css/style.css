@@ -1,0 +1,664 @@
+*{
+    font-family: 'Raleway', sans-serif;
+}
+
+
+
+html{
+    scroll-behavior: smooth;
+}
+
+nav{
+    background-color:#00afb9;
+    padding-left: 1em;
+}
+
+button{
+    font-family: 'Raleway',sans-serif;
+}
+
+
+.dancing-font{
+    font-family: 'Dancing Script', cursive;
+    color:white;
+}
+
+.bigger-font{
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.logo-img{
+    height: 90%;
+    margin-right: 15px;
+}
+
+#preporucene{
+    cursor: pointer;
+}
+
+#current{
+    cursor: default;
+}
+
+tbody tr td{
+    width: 33.3333% !important;
+}
+
+.brand-logo{
+    display: flex !important;
+    align-items: center;
+    height: 100%;
+    width: fit-content;
+}
+
+.center{
+    text-align: center !important;
+}
+
+
+.dark-pink{
+    background-color: #f07167;
+}
+
+.bright-blue{
+    background-color:#00afb9 ;
+}
+
+.bright-blue-transparent{
+    background-color:rgba(0,176,185,0.6);
+}
+
+.disabled-link-side a{
+    color:rgba(0,0,0,0.5) !important;
+    cursor: default;
+}
+
+.disabled-link a{
+    color:rgba(255,255,255,0.7);
+    cursor: default;
+    
+
+}
+
+.backdrop{
+    background-color: purple !important;
+}
+.orange-transparent{
+    background-color:#8b8c89;
+}
+
+.white{
+    background-color:white;
+}
+
+.padded{
+    padding: 1em 3em;
+}
+
+.paragraph{
+    font-size:1.2em;
+    font-weight: 400;
+}
+
+h1,h2,h3,h4,h5{
+    font-weight: 600;
+}
+
+hr{
+    width: 70%;
+    height: 3px;
+    background-color: black;
+    border:none;
+}
+
+.height-250{
+    height: 250px;
+}
+
+.height-300{
+    height: 300px;
+}
+
+.height-100{
+    height: 100%;
+}
+
+.card-title{
+    font-weight:600 !important;
+}
+
+.container{
+    width: 90%;
+}
+
+.card-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.col.m4{
+    display: flex;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+}
+
+.card-image{
+    flex-grow: 1;
+}
+
+.card .card-image img {
+    height: 100%;
+}
+
+.col{
+    margin-left: 0 !important;
+}
+.card .card-content{
+    padding: 24px 5px 24px 5px;
+}
+
+.page-footer{
+    background-color: #00afb9;
+
+}
+
+.height-600{
+    height: 600px !important;
+}
+
+footer i,footer img{
+    position: relative;
+    right:5px;
+    top:6px;
+}
+
+.left-align{
+    text-align: left;
+}
+
+.flex-basis{
+    flex-basis: auto;
+}
+
+footer a{
+    text-decoration: none;
+    color: white;
+}
+
+.bigger-line-height{
+    line-height: 2;
+}
+
+.modal{
+    color:black;
+}
+
+.no-float{
+    float:none;
+}
+
+
+.collapsible-header{
+    justify-content: center;
+}
+
+.no-left{
+    text-align: unset;
+}
+
+.justify-center{
+    justify-content: center;
+}
+
+.inline-block{
+    display: inline-block;
+}
+
+.container-80{
+    width: 80%;
+    display: inline-block;
+}
+
+.indicator-item.active{
+    background-color: #f07167 !important;
+}
+
+
+.caption{
+    background-color: rgba(0,0,0,0.7);
+}
+
+
+.slider .slides li .caption{
+    top:auto;
+    bottom:15%;
+    left:0;
+    width:60%;
+    padding-left:1em;
+}
+
+.short-desc-img{
+    width: 70%;
+}
+
+.hr-width-smaller{
+    width: 60%;
+}
+
+.width-80{
+    width: 80%;
+}
+
+.city-short-info{
+    text-align: left;
+    font-size: 1em;
+
+}
+
+.do-font{
+    font-size: 1.2em;
+}
+
+.margin-right{
+margin-right: 1%;
+}
+
+.flex-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+ul.table-of-contents a.active{
+    color: rgba(0,0,0,0.8);
+    font-weight: 800;
+}
+
+ul.table-of-contents{
+    line-height: 2em;
+}
+
+.vertical-line{
+    height:50%;
+    display: inline;
+    border-right: 1px solid rgba(0,0,0,0.4);
+}
+
+.border-left{
+    border-left: 1px solid rgba(0,0,0,0.2);
+}
+
+.padded-more{
+    padding: 1em 5em;
+}
+
+.btn-margin{
+    margin: 0.5em;
+}
+
+.visibility{
+    visibility: hidden;
+}
+
+.collapsible-header-align{
+    justify-content: flex-end;
+}
+
+.width-100{
+    width: 100%;
+    text-align: center;
+}
+
+.on-left{
+    left:24px;
+    right: unset;
+}
+
+.text-size-tour{
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+.minimum-padding{
+    padding: 1em 0.5em;
+}
+
+.width-60{
+    width: 60%;
+}
+
+.smaller-font{
+    font-size: 1.5em;
+    font-weight: normal;
+}
+
+
+.medium-size-icon{
+    font-size: 35px;
+}
+
+
+.margin-right-icon{
+    margin-right: 5px;
+}
+
+.margin-fixed{
+    margin-top: 2em;
+}
+
+.break-words{
+    word-break: break-word;
+}
+
+.width-1em{
+    width: 1em;
+}
+
+.progress{
+    height:20px;
+    width: 60%;
+    margin: 0 0 0 1em;
+    border-radius: 5px;
+    background-color: #f5beba;
+
+}
+
+.progress .determinate{
+    background-color: #00afb9;
+}
+
+.flex-column{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.size-large{
+    font-size: x-large;
+}
+
+.black-text{
+    color: #000;
+}
+
+.progress-margin-bottom{
+    margin-bottom: 1em;
+}
+
+.margin-left-1em{
+    margin-left: 1em;
+}
+
+.justify-left{
+    justify-content: left;
+}
+
+.centralize{
+    margin: 0 auto;
+}
+
+.width-85{
+    width: 85%;
+}
+
+.margin-left{
+    margin-left: 1em;
+}
+
+.rating{
+    margin: 0.1em 0 0.3em 0;
+}
+
+.no-bottom-margin{
+    margin-bottom: 0;
+}
+
+.position-relative{
+    position: relative;
+}
+
+.position-absolute{
+    position: absolute;
+}
+
+.stick-to-top-right{
+    top:-20px;
+    right:-12px;
+}
+
+.tab-padding{
+    padding: 15px 10px;
+    
+}
+
+
+.card-panel{
+    padding: 24px 0;
+}
+
+.transparency{
+    padding:1px 0;
+    background-color: rgba(255,255,255,0.8);
+}
+
+
+.margin-bottom{
+    margin-bottom: 1em;
+}
+
+
+.overflow-all{
+    overflow: scroll !important;
+}
+
+textarea{
+    resize: vertical !important;
+}
+
+
+/*Dizajn scrollbara*/
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+::-webkit-scrollbar-track {
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888; 
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+  .block{
+      display: block;
+  }
+
+.margin-5{
+    margin: 0 5px;
+}
+
+.fixed-padding{
+    padding:0  0.75em 0 0 !important;
+}
+
+.small-padding-bottom{
+    padding-bottom: 5px !important;
+}
+
+
+
+@media only screen and (max-width:500px){
+    .row .col.s6{
+        width: 100%;
+    }
+
+    .left-align{
+        text-align: center;
+    }
+
+    nav .sidenav-trigger{
+        margin: 0;
+    }
+
+    .logo-img{
+        height: 80%;
+        margin-right: 5px;
+    }
+
+    .btn-large{
+        line-height: unset;
+        padding: 10px;
+        height: fit-content;
+        width: fit-content;
+    }
+
+
+    .flex-on-resize{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .flex-on-resize .btn{
+        margin-bottom:10px
+    }
+
+    .row{
+        margin-bottom: 0;
+    }
+
+    .slider .slides li .caption{
+        width: 100%;
+        text-align: center;
+    }
+
+    .indicator-item{
+        height: 11px !important;
+        width: 11px !important;
+    }
+
+    .container-80{
+        width: 100%;
+    }
+
+    .slider{
+        height: 450px !important;
+    }
+
+    .slides{
+        height: 400px !important;
+    }
+
+    .padded{
+        padding: 1em;
+    }
+
+    .short-desc-img,.width-60{
+        width: 90%;
+    }
+
+    .hr-width-smaller{
+        width: 80%;
+    }
+
+    .modal .modal-content{
+        padding: 24px 15px;
+    }
+
+    .medium-size-icon{
+        font-size: 25px !important;
+    }
+
+    .progress{
+        height: 10px;
+    }
+
+    .progress-margin-bottom{
+        margin-bottom: 0.5em;
+    }
+
+    .margin-left{
+        margin-left: 0.5em;
+    }
+
+    .margin-fixed,.margin-on-resize{
+        margin-top: 1.2em;
+    }
+
+    .brand-logo{
+        width: max-content;
+    }
+
+}
+
+
+@media only screen and (max-width:600px){
+    .row .col.s9{
+        width: 100%;
+    }
+    .visibility{
+        visibility:visible !important;
+    }
+
+    .card{
+        height: unset;
+    }
+}
+
+@media only screen and (max-width:700px){
+    .input-field > label{
+        font-size:0.8em;
+        font-weight: 400;
+    }
+
+    h1{
+        font-size: 3em;
+    }
+    .bigger-font{
+        font-size: xx-large;
+    }
+
+    h2{
+        font-size: 2.5em;
+    }
+
+    h3{
+        font-size:2em;
+    }
+
+    h4,.card .card-title{
+        font-size: 1.5em;
+    }
+
+    h5,.smaller-font,.size-large{
+        font-size: 1.2em !important;
+    }
+
+    .btn-large,.paragraph,p,.text-size-tour{
+        font-size: 1em !important;
+    }
+
+    .tabs .tab a{
+        font-size: 0.85em;
+    }
+
+}
+
+
+

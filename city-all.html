@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang = "sr">
+    <head>
+        <title>XY travel- City</title>
+        <meta charset = "utf-8">
+        <meta name = "viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit = no">
+        <meta http-equiv = "X-UA-Compatible" content = "IE=edge">
+        <link rel = "icon" href = "https://ik.imagekit.io/mnyplybq4/travel_m_s2l7yy849y.png">
+
+        <!-- Google font linkovi -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Raleway:wght@300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        <!-- Custom css link-->
+        <link rel = "stylesheet" href = "css/style.css">
+    </head>
+<body>
+
+    <!-- Navigacija-->
+    <header>
+        <div class="navbar-fixed">
+            <nav>
+                <!--Hamburger ikonica za sidebar-->
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <div class = "nav-wrapper">
+                    <a class = "brand-logo" href = "index.html">
+                        <img class="logo-img" src = "https://ik.imagekit.io/mnyplybq4/travel_m_s2l7yy849y.png" alt = "Logo">
+                        <p class = "bigger-font dancing-font">Some xy Travel</p>
+                    </a>
+                    <ul class=" hide-on-med-and-down right margin-right">
+                        <li><a href="index.html">Početna</a></li>
+                        <li><a href="administrator.html">Administrator</a></li>
+                        <li id = "acc"><a>Nalog</a></li>
+                        <li id = "login-btn"><a class=" waves-effect btn dark-pink modal-trigger" href="#modal-prijava"> </a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <!--Sidebar koji se aktivira kada se navigacija dovoljno smanji-->
+        <ul class="sidenav" id="mobile-demo">
+            <li><a href="index.html">Početna</a></li>
+            <li><a href="administrator.html">Administrator</a></li>
+            <li id = "acc-side"><a>Nalog</a></li>
+            <li id = "login-side"><a class = "modal-trigger" href="#modal-prijava"></a></li>
+        </ul> 
+    </header>
+
+
+        <!--Pop up forma za registraciju/prijavu-->
+        <div id="modal-prijava" class = "modal">
+            <div class="modal-content center">
+                <div class = "flex-on-resize">
+                    <h3>Prijava/Registracija</h3>
+                </div>
+                <ul class="collapsible" id = "modal-tabs">
+                    <li class = "no-float">
+    
+                        <!--Forma za prijavu-->
+                        <div class="collapsible-header">Prijava</div>
+                        <div class="collapsible-body white">
+                            <div class = "flex">
+                                <form id = "prijava">
+                                    <div class = "row center">
+                                        <div class="input-field col s12 fixed-padding">
+                                            <i class="material-icons prefix">account_circle</i>
+                                            <input id="username_login" type="text">
+                                            <label for="username_login">Korisničko ime</label>
+                                            <span class="helper-text" data-error="" data-success=""> </span>
+                                        </div>
+                                    </div>
+        
+                                    <div class = "row center">
+                                        <div class="input-field col s12 fixed-padding">
+                                            <i class="material-icons prefix">vpn_key</i>
+                                            <input id="password_login" type="password">
+                                            <label for="password_login">Lozinka</label>
+                                            <span class="helper-text" data-error="" data-success=""> </span>
+                                        </div>
+                                    </div>
+                                </form>
+                                <button disabled type= "button" class="btn waves-effect dark-pink" id = "btn_login">Prijavi me</button>
+                            </div>
+                        </div>
+                    </li>
+    
+    
+                  <!--Forma za registraciju-->
+                    <li class = "no-float">
+                        <div class="collapsible-header">Registracija</div>
+                        <div class="collapsible-body white">
+                            <form id = "registracija">
+                                <div class="row">
+                                    <div class="input-field col s6 fixed-padding">
+                                        <i class="material-icons prefix">account_circle</i>
+                                        <input  id="first_name" type="text">
+                                        <label for="first_name">Ime</label>
+                                        <span class="helper-text" data-error="Greška" data-success="Tačno"> </span>
+                                    </div>
+    
+                                    <div class="input-field col s6 fixed-padding">
+                                        <i class="material-icons prefix">account_circle</i>
+                                        <input id="last_name" type="text">
+                                        <label for="last_name">Prezime</label>
+                                        <span class="helper-text" data-error="Greška" data-success="Tačno"> </span>
+                                    </div>
+                                </div>
+    
+                                <div class="row">
+                                    <div class="input-field col s6 fixed-padding">
+                                        <i class="material-icons prefix">account_circle</i>
+                                    <input id="username" type="text">
+                                    <label for="username">Korisničko ime</label>
+                                    <span class="helper-text" data-error="Greška" data-success="Tačno"> </span>
+                                    </div>
+    
+                                <div class="input-field col s6 fixed-padding">
+                                    <i class="material-icons prefix">vpn_key</i>
+                                    <input  id="pass" type="text">
+                                    <label for="pass">Lozinka</label>
+                                    <span class="helper-text" data-error="Greška" data-success="Tačno"> </span>
+                                </div>
+                                </div>
+    
+    
+                                <div class="row">
+                                    <div class="input-field col s6 fixed-padding">
+                                        <i class="material-icons prefix">date_range</i>
+                                        <input  id="birthdate" type="date">
+                                        <label for = "birthdate">Datum rođenja</label>
+                                         <span class="helper-text" data-error="Greška" data-success="Tačno"> </span>
+                                    </div>
+    
+                                    <div class="input-field col s6 fixed-padding">
+                                        <i class="material-icons prefix">email</i>
+                                        <input  id="email" type="email">
+                                        <label for="email">Email</label>
+                                        <span class = "helper-text" data-error="Greška" data-success="Tačno"> </span>
+                                    </div>
+                                </div>
+    
+                                <div class = "row">
+                                    <div class="input-field col s6 fixed-padding">
+                                        <i class="material-icons prefix">home</i>
+                                        <input id="address" type="text">
+                                        <label for ="address">Adresa</label>
+                                        <span class="helper-text" data-error="Greška" data-success="Tačno"> </span>
+                                    </div>
+    
+                                    <div class="input-field col s6 fixed-padding">
+                                        <i class="material-icons prefix">local_phone</i>
+                                        <input  id="tel-num" type="tel">
+                                        <label for="tel-num">Broj telefona</label>
+                                        <span class="helper-text" data-error="Greška" data-success="Tačno"> </span>
+                                    </div>
+                                </div>
+    
+                                <div class = "center flex-on-resize">
+                                    <button type = "button" class="btn waves-effect dark-pink margin-5" disabled  id = "registruj">Registruj me</button>
+                                    <button type = "button" class="btn waves-effect dark-pink margin-5" id = "otkazi">Otkaži</button>
+                                </div>
+                            </form>   
+                        </div>     
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!--Gornji deo parallax-a-->
+        <div class="parallax-container height-250">
+            <div class="parallax"><img src="https://ik.imagekit.io/mnyplybq4/prague_vywsNnZbl.jpg" alt = "Background"></div>
+        </div>
+        
+    <!--Glavni sadrzaj-->
+    <!--Samo je prva i druga kartica popunjena podacima-->
+
+    <main>
+        <div class = "center minimum-padding">
+            <div class="row flex-container">
+                <div class="col s9 border-right">
+                    <div id="sve_ture" class="section scrollspy">
+                        <h1 id = "naslov"></h1>
+                        <hr class = "dark-pink">
+                        <br>
+
+                        <!--Lista svih tura-->
+                        <ul class="collapsible popout" id = "tour-list">
+                            <!--Podaci o turi-->
+                            
+                        </ul> 
+                    </div>
+                </div>
+
+                <!--Scrollspy sa desne strane stranice-->
+                <div class="col hide-on-small-only s3 offset-s1 center ">
+                    <div class = "inline-block border-left padded">
+                        <div class = "left-align">
+                            <ul class="section table-of-contents">
+                                <li><a href="index.html#ponuda-gradova">Ponuda gradova</a></li>
+                                <li><a id = "preporucene"></a></li>
+                                <li><a class = "active" id = "current"></a></li> 
+                            </ul>
+                        </div>
+
+                    <!--Dugmici za kopiranje emaila i telefona-->
+                        <a id = "btn-phone" class="btn-floating btn-large waves-effect waves-light dark-pink btn-margin tooltipped" data-position="bottom" data-tooltip="Rezerviši telefonom" onclick="M.toast({html: 'Broj telefona je kopiran!'})"><i class="material-icons">local_phone</i></a>
+                        <a id = "btn-email" class="btn-floating btn-large waves-effect waves-light dark-pink tooltipped" data-position="bottom" data-tooltip="Rezerviši email-om" onclick="M.toast({html: 'Email adresa je kopirana!'})"><i class="material-icons">mail</i></a>
+                    </div>
+               </div>
+            </div>
+        </div>   
+    </main>
+
+
+    <!-- Donji deo parallax-a-->
+    <div class="parallax-container height-250">
+        <div class="parallax"><img src="https://ik.imagekit.io/mnyplybq4/prague_vywsNnZbl.jpg" alt = "Background"></div>
+    </div>
+           
+<!--Footer-->
+    <footer class="page-footer">
+        <div class="row">
+            <div class="col s6 center">
+                <h4 class="white-text">XY Travel</h4>
+                <hr class = "white hr-smaller-width">
+                <div class = "left-align inline-block">
+                    <ul>
+                        <li><i class = "material-icons">access_time</i>Radno vreme: Ponedeljak-Petak: 08:00-20:00</li>
+                        <li>Subota: 09:00-18:00 Nedeljom ne radimo</li>
+                        <li><i class = "material-icons">home</i>Adresa: XYZ 160, Novi Sad</li>
+                        <li><i class = "material-icons">local_phone</i>Kontakt telefon: <span id = "phone-number">021 123 456</span></li>
+                        <li><i class = "material-icons">mail</i>Mail: <span id = "email-address">xytravel@mail.com</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col s6 center">
+                <h4 class="white-text">Pronađite nas</h4>
+                <hr class = "white hr-smaller-width">
+                <div class = "left-align inline-block">
+                    <ul class = "bigger-line-height">
+                        <li><a href="https://www.facebook.com/"><img src="https://img.icons8.com/android/96/ffffff/facebook-new.png" width = "24" alt = "Facebook"> Facebook: @XY.Travel</a></li>
+                        <li><a href="https://www.instagram.com/"><img src="https://img.icons8.com/metro/104/ffffff/instagram-new.png" width = "24" alt = "Instagram"> Instagram: @XY.Travel</a></li>
+                        <li><a href="https://www.twitter.com/"><img src="https://img.icons8.com/android/96/ffffff/twitter.png" width = "24" alt = "Twitter">Twitter: @XY.Travel</a></li>
+                        <li><a href="https://www.youtube.com/"><img src="https://img.icons8.com/material-rounded/96/ffffff/youtube-play.png" width = "24" alt = "Youtube">Youtube: @XY.Travel</a></li>           
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container center">© 2021 Made With Materialize</div>
+        </div>
+    </footer>
+
+<!--Dugme za povratak na pocetak stranice-->
+    <div class="fixed-action-btn">
+        <a class="btn-floating btn-large dark-pink tooltipped" id = "to-top-btn" data-position="top" data-tooltip="Početak stranice"><i class="large material-icons">arrow_upward</i></a>
+    </div>
+
+<!--Dugme za kopiranje telefona i maila (vidljivo samo na kada scrollspy nestane)-->
+    <div class="fixed-action-btn on-left visibility city-all-specific">
+        <a class="btn-floating btn-large dark-pink">
+            <i class="large material-icons">room_service</i>
+        </a>
+        <ul>
+            <li><a class="btn-floating bright-blue" id = "btn-phone-small" onclick="M.toast({html: 'Broj telefona je kopiran!'})"><i class="material-icons">local_phone</i></a></li>
+            <li><a class="btn-floating bright-blue" id = "btn-email-small" onclick="M.toast({html: 'Email adresa je kopirana!'})"><i class="material-icons">mail</i></a></li>
+        </ul>
+    </div>
+
+
+
+<!--Materialize js-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+<!--Zajednicka skripta-->
+<script src = "javascript/javascript.js"></script>
+
+<!--Custom skripta-->
+<script src = "javascript/city-all.js"></script>
+
+</body>
+</html>
