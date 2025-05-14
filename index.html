@@ -13,7 +13,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Raleway:wght@300&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
         <!-- Custom css link-->
         <link rel = "stylesheet" href = "css/style.css">
     </head>
@@ -28,12 +28,12 @@
                 <div class = "nav-wrapper">
                     <a class = "brand-logo" href = "#!">
                         <img class="logo-img" src = "https://ik.imagekit.io/mnyplybq4/travel_m_s2l7yy849y.png" alt = "Logo">
-                        <p class = "bigger-font dancing-font">Some xy Travel</p>
+                        <p class = "bigger-font dancing-font">Vijuk's projects</p>
                     </a>
                     <ul class=" hide-on-med-and-down right margin-right" id = "navigation">
                         <li class ="active"><a href="#">Početna</a></li>
-                        <li id = "admin" ><a href="administrator.html">Administrator</a></li>
-                        <li id = "acc"><a>Nalog</a></li>
+                        <li id = "admin" >Administrator</li>
+                        <li id = "acc"><a>About me</a></li>
                         <li id = "login-btn"><a class=" waves-effect btn dark-pink modal-trigger" href="#modal-prijava"> </a></li>
                     </ul>
                 </div>
@@ -43,208 +43,130 @@
         <!--Sidebar koji se aktivira kada se navigacija dovoljno smanji-->
         <ul class="sidenav" id="mobile-demo">
             <li><a href="#!">Početna</a></li>
-            <li id = "admin-side"><a href="administrator.html">Administrator</a></li>
-            <li id = "acc-side"><a>Nalog</a></li>
-            <li id = "login-side"><a class = "modal-trigger" href="#modal-prijava"> </a></li>
+            <li id = "admin-side"><a >Administrator</a></li>
+            <li id = "acc-side"><a>About mee</a></li>
+            <li id = "login-side"><a class = "modal-trigger" href="#modal-prijava">Prijava/Registracija</a></li>
         </ul> 
     </header>
 
 
-        <!--Pop up forma za registraciju/prijavu-->
-        <div id="modal-prijava" class = "modal">
-            <div class="modal-content center">
-                <div class = "flex-on-resize">
-                    <h3>Prijava/Registracija</h3>
-                </div>
-                <ul class="collapsible" id = "modal-tabs">
-                    <li class = "no-float">
-    
-                        <!--Forma za prijavu-->
-                        <div class="collapsible-header">Prijava</div>
-                        <div class="collapsible-body white">
-                            <div class = "flex">
-                                <form id = "prijava">
-                                    <div class = "row center">
-                                        <div class="input-field col s12 fixed-padding">
-                                            <i class="material-icons prefix">account_circle</i>
-                                            <input id="username_login" type="text">
-                                            <label for="username_login">Korisničko ime</label>
-                                            <span class="helper-text" data-error="" data-success=""> </span>
-                                        </div>
-                                    </div>
-        
-                                    <div class = "row center">
-                                        <div class="input-field col s12 fixed-padding">
-                                            <i class="material-icons prefix">vpn_key</i>
-                                            <input id="password_login" type="password">
-                                            <label for="password_login">Lozinka</label>
-                                            <span class="helper-text" data-error="" data-success=""> </span>
-                                        </div>
-                                    </div>
-                                </form>
-                                <button disabled type= "button" class="btn waves-effect dark-pink" id = "btn_login">Prijavi me</button>
-                            </div>
-                        </div>
-                    </li>
-    
-    
-                  <!--Forma za registraciju-->
-                    <li class = "no-float">
-                        <div class="collapsible-header">Registracija</div>
-                        <div class="collapsible-body white">
-                            <form id = "registracija">
-                                <div class="row">
-                                    <div class="input-field col s6 fixed-padding">
-                                        <i class="material-icons prefix">account_circle</i>
-                                        <input  id="first_name" type="text">
-                                        <label for="first_name">Ime</label>
-                                        <span class="helper-text" data-error="Greška" data-success="Tačno"> </span>
-                                    </div>
-    
-                                    <div class="input-field col s6 fixed-padding">
-                                        <i class="material-icons prefix">account_circle</i>
-                                        <input id="last_name" type="text">
-                                        <label for="last_name">Prezime</label>
-                                        <span class="helper-text" data-error="Greška" data-success="Tačno"> </span>
-                                    </div>
-                                </div>
-    
-                                <div class="row">
-                                    <div class="input-field col s6 fixed-padding">
-                                        <i class="material-icons prefix">account_circle</i>
-                                    <input id="username" type="text">
-                                    <label for="username">Korisničko ime</label>
-                                    <span class="helper-text" data-error="Greška" data-success="Tačno"> </span>
-                                    </div>
-    
-                                <div class="input-field col s6 fixed-padding">
-                                    <i class="material-icons prefix">vpn_key</i>
-                                    <input  id="pass" type="text">
-                                    <label for="pass">Lozinka</label>
-                                    <span class="helper-text" data-error="Greška" data-success="Tačno"> </span>
-                                </div>
-                                </div>
-    
-    
-                                <div class="row">
-                                    <div class="input-field col s6 fixed-padding">
-                                        <i class="material-icons prefix">date_range</i>
-                                        <input  id="birthdate" type="date">
-                                        <label for = "birthdate">Datum rođenja</label>
-                                         <span class="helper-text" data-error="Greška" data-success="Tačno"> </span>
-                                    </div>
-    
-                                    <div class="input-field col s6 fixed-padding">
-                                        <i class="material-icons prefix">email</i>
-                                        <input  id="email" type="email">
-                                        <label for="email">Email</label>
-                                        <span class = "helper-text" data-error="Greška" data-success="Tačno"> </span>
-                                    </div>
-                                </div>
-    
-                                <div class = "row">
-                                    <div class="input-field col s6 fixed-padding">
-                                        <i class="material-icons prefix">home</i>
-                                        <input id="address" type="text">
-                                        <label for ="address">Adresa</label>
-                                        <span class="helper-text" data-error="Greška" data-success="Tačno"> </span>
-                                    </div>
-    
-                                    <div class="input-field col s6 fixed-padding">
-                                        <i class="material-icons prefix">local_phone</i>
-                                        <input  id="tel-num" type="tel">
-                                        <label for="tel-num">Broj telefona</label>
-                                        <span class="helper-text" data-error="Greška" data-success="Tačno"> </span>
-                                    </div>
-                                </div>
-    
-                                <div class = "center flex-on-resize">
-                                    <button type = "button" class="btn waves-effect dark-pink margin-5" disabled  id = "registruj">Registruj me</button>
-                                    <button type = "button" class="btn waves-effect dark-pink margin-5" id = "otkazi">Otkaži</button>
-                                </div>
-                            </form>   
-                        </div>     
-                    </li>
-                </ul>
-            </div>
-        </div>
-        
-
     <!--Gornja pozadinska slika-->
-
     <div class="parallax-container height-300">
-        <div class="parallax"><img src="https://ik.imagekit.io/mnyplybq4/background_J4ZF21VS3.jpg" alt = "Background"></div>
+        <div class="parallax"><img src="https://media.licdn.com/dms/image/v2/D5612AQEvQU5DTiGRqw/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1679896039793?e=2147483647&v=beta&t=eWoPiKsYv6_6WZA6XlaM0dqR4Q3ELivTAsqDUN3ErkI" alt = "Background"></div>
     </div>
 
     <!--Glavni sadrzaj-->
     <main>
         <div class="padded center">
            
-            <h1 >Dobrodošli na XY Travel!</h1>  
-            <p class = "paragraph">(O nama) Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-                It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-            <br>
-            <hr class = "dark-pink">
-            <h2 id = "ponuda-gradova">Ponuda gradova:</h2>
+            <div class="about-section">
+    <h2>About Me<span class="material-icons toggle-arrow" id="toggle-arrow">expand_more</span></h2>
+    <div class="about-text" id="about-text">
+        <h5>Hello! I'm Miloš.</h5>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur luctus leo at iaculis cursus. Proin vehicula turpis augue, nec volutpat velit dignissim in. Donec id tempus dui. Sed ullamcorper elit vel velit interdum, in accumsan nibh tristique. Nullam erat leo, mattis sit amet metus vel, iaculis varius tellus. Nulla facilisi. Phasellus accumsan laoreet dui at porttitor. Quisque scelerisque posuere lorem, sed suscipit urna placerat sit amet. Suspendisse nec nibh sed dui porta mattis. Vestibulum dignissim consectetur turpis, a pulvinar tortor tempor hendrerit. Integer sed arcu lacus. Sed varius nisl ut stique enim.</p>
+    </div>
+<div class="info-box">
+  <div class="about-content">
+    <img src="https://i.ibb.co/t7tCqbZ/Screenshot-20210329-195131-Viber.jpg" alt="Tvoja slika" class="about-image">
+    <div class="text-content">
+      <h2 class="name-title">Miloš Vijuk</h2>
+      <h3 class="role-title" data-aos="zoom-in">Full Stack Developer</h3>
+    </div>
+  </div>
 
-        <!--Kartice sa gradovima-->
-            <div class = "container" >
-                <div class="row card-container" id = "gradovi">
-                </div>
-                </div>
-            </div>
-        </div>
+  <div class="contact-info">
+    <div class="info-item" data-aos="fade-left">
+      <span class="material-icons contact-icon">email</span>
+      <a href="mailto:vijukmilos022@gmail.com?subject=Subject&body=Hello Miloš.">vijukmilos022@gmail.com</a>
+    </div>
+    <div class="info-item" data-aos="fade-right">
+      <span class="material-icons contact-icon">phone</span>
+      <a href="tel:+381612045180">+381612045180</a>
+    </div>
+    <div class="info-item" data-aos="fade-left">
+      <span class="material-icons contact-icon">home</span>
+      <p>Novi Sad, Serbia</p>
+    </div>
+    <div class="info-item" data-aos="fade-right">
+      <span class="material-icons contact-icon">school</span>
+      <p>Faculty of Technical Sciences</p>
+    </div>
+  </div>
+</div>
+
+
     </main>
 
-<!-- Donji deo parallax-a-->
-    <div class="parallax-container height-300">
-        <div class="parallax"><img src="https://ik.imagekit.io/mnyplybq4/background_J4ZF21VS3.jpg" alt = "Background"></div>
+<!-- srednji deo parallax-a-->
+    <div class="parallax-container height-250">
+        <div class="parallax"><img src="https://technology.rogerscapital.mu/wp-content/uploads/2023/07/Cloud-and-Data-Banner-1.jpg" alt = "Background"></div>
     </div>
 
-
+     <!--Glavni sadrzaj-->
+    <main>
+        <div class="padded center">
+           
+            <h1 >My projects</h1>  
+            <p class = "paragraph">(O xnama) Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+               remaining essent and moresions of Lorem .</p>
+            <hr class = "dark-pink">
+     <div class = "projects-container" >
+                <div class="project-card web-card" style="background-image: url('https://dorve.com/wp-content/uploads/2021/03/web-development-services-cover.png');">
+                        <h2>Web </h2>
+                 </div>
+        <div class="card-wrapper">
+            <div class="project-card  ai-card" style="background-image: url('https://admin.live.ilo.org/sites/default/files/styles/xx_wide/public/2024-07/ai-technology-brain-background-digital-transformation-concept.jpg?itok=QF0jKKdF');">
+                <h2>AI </h2>
+            </div>
+        </div>
+                <div class="project-card graphic-card" style="background-image: url('https://invozone.com/static/9aef9cdb4d9d58c3fd42293ad15f3cb5/fastest_growing_programming_languages_e6fd2f2785.webp');">
+                <h2>Graphic </h2>
+                 </div>
+    </div>
+        </div>
+    </main>
+<!-- donji deo parallax-a-->
+    <div class="parallax-container height-250">
+        <div class="parallax"><img src="https://technology.rogerscapital.mu/wp-content/uploads/2023/07/Cloud-and-Data-Banner-1.jpg" alt = "Background"></div>
+    </div>
 <!--Footer-->
     <footer class="page-footer">
         <div class="row">
             <div class="col s6 center">
-                <h4 class="white-text">XY Travel</h4>
+                <h4 class="white-text">Contact me</h4>
                 <hr class = "white hr-smaller-width">
-                <div class = "left-align inline-block">
-                    <ul>
-                        <li><i class = "material-icons">access_time</i>Radno vreme: Ponedeljak-Petak: 08:00-20:00</li>
-                        <li>Subota: 09:00-18:00 Nedeljom ne radimo</li>
-                        <li><i class = "material-icons">home</i>Adresa: XYZ 160, Novi Sad</li>
-                        <li><i class = "material-icons">local_phone</i>Kontakt telefon: 021 123 456</li>
-                        <li><i class = "material-icons">mail</i>Mail: xytravel@mail.com</li>
+                <div class="contact-me">
+                     <ul>
+                        <li><i class = "material-icons">home</i> Novi Sad, Serbia</li>
+                        <li><i class = "material-icons">local_phone</i>+3812045180</li>
+                        <li><i class = "material-icons">mail</i>vijukmilos022@gmail.com</li>
                     </ul>
                 </div>
-            </div>
+            </div> 
 
             <div class="col s6 center">
-                <h4 class="white-text">Pronađite nas</h4>
+                <h4 class="white-text">Follow me</h4>
                 <hr class = "white hr-smaller-width">
                 <div class = "left-align inline-block">
                     <ul class = "bigger-line-height">
-                        <li><a href="https://www.facebook.com/"><img src="https://img.icons8.com/android/96/ffffff/facebook-new.png" width = "24" alt = "Facebook"> Facebook: @XY.Travel</a></li>
-                        <li><a href="https://www.instagram.com/"><img src="https://img.icons8.com/metro/104/ffffff/instagram-new.png" width = "24"  alt = "Instagram"> Instagram: @XY.Travel</a></li>
-                        <li><a href="https://www.twitter.com/"><img src="https://img.icons8.com/android/96/ffffff/twitter.png" width = "24" alt = "Twitter">Twitter: @XY.Travel</a></li>
-                        <li><a href="https://www.youtube.com/"><img src="https://img.icons8.com/material-rounded/96/ffffff/youtube-play.png" width = "24" alt = "Youtube">Youtube: @XY.Travel</a></li>           
+                        <li><a href="https://www.facebook.com/"><img src="https://img.icons8.com/android/96/ffffff/facebook-new.png" width = "24" alt = "Facebook"></a></li>
+                        <li><a href="https://www.instagram.com/"><img src="https://img.icons8.com/metro/104/ffffff/instagram-new.png" width = "24"  alt = "Instagram"></a></li>
+                        <li><a href="https://www.twitter.com/"><img src="https://img.icons8.com/android/96/ffffff/twitter.png" width = "24" alt = "Twitter"></a></li>
+                        <li><a href="https://www.youtube.com/"><img src="https://img.icons8.com/material-rounded/96/ffffff/youtube-play.png" width = "24" alt = "Youtube"></a></li>           
                     </ul>
                 </div>
             </div>
         </div>
         <div class="footer-copyright">
-            <div class="container center">© 2021 Made With Materialize</div>
+            <div class="container center">© 2025 ALEX</div>
         </div>
     </footer>
 
 <!--Dugme za povratak na pocetak stranice-->
     <div class="fixed-action-btn">
-        <a class="btn-floating btn-large dark-pink tooltipped" id = "to-top-btn" data-position="top" data-tooltip="Početak stranice"><i class="large material-icons">arrow_upward</i></a>
+        <a class="btn-floating btn-large dark-pink tooltipped" id = "to-top-btn" data-position="top" data-tooltip="Back on top"><i class="large material-icons">arrow_upward</i></a>
     </div>
 
-<!--Zajednicka skripta-->
-<script src = "javascript/javascript.js"></script>
 
 <!--Custom skripta-->
 <script src = "javascript/index.js"></script>
@@ -252,6 +174,7 @@
 <!--Materialize js-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 
 </body>
 </html>

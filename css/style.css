@@ -9,7 +9,7 @@ html{
 }
 
 nav{
-    background-color:#00afb9;
+    background-color:#383c54;
     padding-left: 1em;
 }
 
@@ -92,9 +92,7 @@ tbody tr td{
     background-color:white;
 }
 
-.padded{
-    padding: 1em 3em;
-}
+
 
 .paragraph{
     font-size:1.2em;
@@ -120,24 +118,13 @@ hr{
     height: 300px;
 }
 
-.height-100{
-    height: 100%;
-}
+
 
 .card-title{
     font-weight:600 !important;
 }
 
-.container{
-    width: 90%;
-}
 
-.card-container{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-}
 
 .col.m4{
     display: flex;
@@ -164,7 +151,7 @@ hr{
 }
 
 .page-footer{
-    background-color: #00afb9;
+    background-color: #383c54;
 
 }
 
@@ -191,9 +178,6 @@ footer a{
     color: white;
 }
 
-.bigger-line-height{
-    line-height: 2;
-}
 
 .modal{
     color:black;
@@ -217,11 +201,6 @@ footer a{
 }
 
 .inline-block{
-    display: inline-block;
-}
-
-.container-80{
-    width: 80%;
     display: inline-block;
 }
 
@@ -268,6 +247,10 @@ footer a{
 .margin-right{
 margin-right: 1%;
 }
+main {
+      background-color: #383c54; /* Pozadinska boja */
+
+}
 
 .flex-container{
     display: flex;
@@ -295,9 +278,7 @@ ul.table-of-contents{
     border-left: 1px solid rgba(0,0,0,0.2);
 }
 
-.padded-more{
-    padding: 1em 5em;
-}
+
 
 .btn-margin{
     margin: 0.5em;
@@ -387,7 +368,7 @@ ul.table-of-contents{
 }
 
 .black-text{
-    color: #000;
+    color: white;
 }
 
 .progress-margin-bottom{
@@ -553,9 +534,6 @@ textarea{
         width: 11px !important;
     }
 
-    .container-80{
-        width: 100%;
-    }
 
     .slider{
         height: 450px !important;
@@ -606,7 +584,49 @@ textarea{
     }
 
 }
+.contact-me {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+}
 
+.contact-me ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-me li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.contact-me i {
+    width: 30px; /* Fiksna širina za sve ikonice */
+    font-size: 24px;
+    text-align: center;
+}
+
+.contact-me span {
+    display: inline-block;
+}
+
+
+.bigger-line-height {
+  display: flex; /* Prikazuje stavke liste u jednom redu */
+  justify-content: center; /* Poravnava stavke centrirano */
+  list-style: none; /* Uklanja oznake liste (tačke) */
+  padding: 0;
+  gap: 15px;      
+  line-height: 2;
+}
+
+.bigger-line-height li {
+  display: flex; /* Fleksibilno za ikone */
+  align-items: center;
+}
 
 @media only screen and (max-width:600px){
     .row .col.s9{
@@ -662,3 +682,310 @@ textarea{
 
 
 
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 2% 2%;
+}
+/* Direktni potomci: jednaki flex-basis */
+.projects-container > .card-wrapper,
+.projects-container > .project-card {
+  flex: 0 0 calc(30% - 20px);  /* 30% širine minus gap */
+  height: 250px;               /* fiksna visina */
+}
+
+.project-card {
+  position: relative;
+  width: calc(33.33% - 20px);
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: transform 1s ease, opacity 1s ease; /* sporiji fade-in */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.project-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  transition: background 0.3s;
+}
+.project-card.ai-card h2 {
+  position: absolute;
+  left: 15%;
+  font-size: 3rem;
+  color: #fff;
+  z-index: 2;
+  text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.9);
+}
+.project-card.web-card h2  {
+  position: absolute;
+  right: 8%;
+  font-size: 3rem;
+  color: #fff;
+  z-index: 2;
+  text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.9);
+}
+
+.project-card.graphic-card h2  {
+  position: absolute;
+  right: 8%;
+  font-size: 3rem;
+  color: #fff;
+  z-index: 2;
+  text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.9);
+}
+.project-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.project-card:hover {
+    transform: scale(1.05);
+}
+
+.project-card:hover::after {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.project-card:hover h2 {
+  transform: scale(1.05);
+  color: #ffd700;
+}
+
+/* Responsivnost za manje ekrane */
+@media (max-width: 768px) {
+  .project-card {
+    width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .project-card {
+    width: 100%;
+  }
+}
+
+/*OVO JE ZA ONO STO IDE OKOLO KARTICE*/
+@property --angle{
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+@property --angle2 {
+  syntax: "<angle>";
+  initial-value: 180deg;
+  inherits: false;
+}
+.card-wrapper.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.card-wrapper {
+  position: relative;
+  width: calc(33.33% - 20px);
+  height: 200px;
+  max-width: 90%;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: transform 1s ease, opacity 1s ease; /* sporiji fade-in */
+
+}
+
+.card-wrapper .project-card {
+  /* sad 100% popunjava wrapper */
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+
+.card-wrapper::before,
+.card-wrapper::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: conic-gradient(from var(--angle), transparent 50%, orange),
+                    conic-gradient(from var(--angle2), transparent 50%, orange);
+  padding: 2%;
+  border-radius: 10px;
+  animation: spin 3s linear infinite;
+  pointer-events: none;
+}
+/* Da conic-gradient bude iza .project-card: */
+.card-wrapper::before { z-index: 0; filter: blur(0.5rem); opacity: 1; }
+.card-wrapper::after  { z-index: 1; }
+
+
+@keyframes spin {
+  from {
+    --angle: 0deg;
+    --angle2: 180deg;
+  }
+  to {
+    --angle: 360deg;
+    --angle2: 540deg; /* 180 + 360 = 540deg */
+  }
+}
+
+
+@media (max-width: 768px) {
+  .projects-container > .card-wrapper,
+  .projects-container > .project-card {
+    flex: 0 0 calc(45% - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-container > .card-wrapper,
+  .projects-container > .project-card {
+    flex: 0 0 80%;
+  }
+}
+/*OVO JE ZA ONO STO IDE OKOLO KARTICE*/
+
+#to-top-btn {
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none; /* Dugme ne reaguje kada je sakriveno */
+  transition: opacity 0.5s ease; /* Brzina fade efekta */
+}
+
+#to-top-btn.show {
+  opacity: 1;
+  pointer-events: auto; /* Dugme reaguje kada je vidljivo */
+}
+.about-section {
+  max-width: 800px; /* Povećana širina za dovoljno prostora */
+  text-align: center;
+  padding: 20px;
+  margin: 0 auto;
+}
+.about-content {
+  display: flex;
+  gap: 0.2em;
+  align-items: flex-start;
+  margin-bottom: 1em;
+}
+.toggle-arrow {
+  cursor: pointer;
+  font-size: 48px; /* Povećana veličina strelice */
+  transition: transform 0.9s ease;
+  display: inline-flex;
+  align-items: center;
+  margin-left: 10px;
+  vertical-align: middle;
+}
+
+.toggle-arrow.rotate {
+  transform: rotate(180deg);
+}
+
+.about-text {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.8s ease, opacity 0.8s ease;
+  opacity: 0;
+}
+
+.about-text.show {
+  max-height: 500px; /* Maksimalna visina kada je otvoreno */
+  opacity: 1;
+}
+.about-image {
+  width: 41%; /* Smanjivanje širine slike na polovinu */
+  height: auto; /* Održavanje proporcija slike */
+  clip-path: inset(0px 0% 0% 1px); 
+  border-radius: 2px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.info-box {
+position: relative;
+  background-color: #f4f4f4;
+  padding: 5%;
+  border-radius: 8px;
+  text-align: left;
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 400px;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #bfe2e7;
+}
+/* Na manjim ekranima (mobilni uređaji) */
+@media (max-width: 768px) {
+  .about-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0; /* Nema razmaka između slika i info box-a */
+  }
+
+
+
+  .info-box {
+    width: 100%; /* Pravougaonik zauzima celu širinu ekrana */
+    margin: 0; /* Nema margine između slika i info box-a */
+    padding: 10px; /* Povećaj padding da bude upotpunjen */
+  }
+}
+.name-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+   margin: 0; /* Uklanja automatsku marginu */
+  padding: 0;
+}
+
+.role-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  color: #000000;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 7px; /* Ovaj razmak će sada biti jednak za sve stavke */
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  
+}
+
+.info-item a,
+.info-item p {
+  margin: 0; /* Uklanjanje automatskog marginiranja */
+  padding: 0;
+  line-height: 1.2; /* Postavljanje konzistentne visine */
+}
+
+.material-icons.contact-icon {
+  font-size: 24px;
+  vertical-align: middle;
+}
+
+.contact-icons {
+  font-size: 24px; /* Veličina ikonica */
+  color: #333;
+}

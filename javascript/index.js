@@ -1,114 +1,86 @@
-/*Dobavi sve dostupne gradove iz firebase-a*/ 
-let request = new XMLHttpRequest();
-    request.onreadystatechange = function(){
-        if (this.readyState == 4){
-            if (this.status == 200){
-                let all_cities = JSON.parse(request.responseText);
-                for(let city_id in all_cities){
-                    createCard(all_cities[city_id],city_id);
-                }
-                 /*s obzirom da ce se tooltip iz javascript.js fajla inicijalizovati pre kreiranja kartica, potrebno je zasebno inicijalizovati
-                 tooltipove za kartice nakon njihovog kreiranja */
-                let elems_tooltip = document.querySelectorAll('.tooltipped');
-                M.Tooltip.init(elems_tooltip, {});
-            }
-            else{
-                alert("Greška!");
-            }
+
+document.addEventListener("DOMContentLoaded", function () {
+  const cards = document.querySelectorAll(".project-card");
+  const wrappers = document.querySelectorAll(".card-wrapper");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        if (entry.target.classList.contains("card-wrapper")) {
+          // Kašnjenje za wrapper
+          setTimeout(() => {
+            entry.target.classList.add("visible");
+          }, 500); // 0.5 sekunde kašnjenje
+        } else {
+          entry.target.classList.add("visible");
         }
-    }  
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.5, // Kada se 50% kartice pojavi, pokreće se fade-in
+  });
 
-    request.open("GET", firebase_url + "/gradovi.json");
-    request.send();
+  cards.forEach((card) => {
+    observer.observe(card);
+  });
 
-/*Funkcija koja stvara pojedinacne kartice sa turama*/
+  wrappers.forEach((wrapper) => {
+    observer.observe(wrapper);
+  });
+});
+window.addEventListener('scroll', function () {
+  const toTopBtn = document.getElementById('to-top-btn');
+  
+  if (window.scrollY > 0) {
+    toTopBtn.classList.add('show');
+  } else {
+    toTopBtn.classList.remove('show');
+  }
+});
 
-function createCard(city,city_id){
-    let column = document.createElement('div');
-    column.classList.add('col','m4');
+document.getElementById('to-top-btn').addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
 
-    let card = document.createElement('div');
-    card.classList.add('card');
-    card.id = city_id;
+/*Inicijalizacija nekih elemenata koji se nalaze na svim/vecini stranica */
+document.addEventListener('DOMContentLoaded', function() {
+  let elems_sidenav = document.querySelectorAll('.sidenav');
+  M.Sidenav.init(elems_sidenav, {});
 
-    let image_container = document.createElement('div');
-    image_container.classList.add('card-image');
+  let elems_parallax = document.querySelectorAll('.parallax');
+  M.Parallax.init(elems_parallax, {});
 
-    let image = document.createElement('img');
-    image.src = city.slika;
-    image.alt = city.naziv;
+  let elems_tooltip = document.querySelectorAll('.tooltipped');
+  M.Tooltip.init(elems_tooltip, {});
 
-    let link = document.createElement('a');
-    link.classList.add('btn-floating','halfway-fab', 'waves-effect', 'waves-light', 'dark-pink', 'tooltipped');
-    link.id = "city_more";
-    link.href = "city.html?city=" + city_id;
+  let elems_modal = document.querySelectorAll('.modal');
+  M.Modal.init(elems_modal, {});
 
-    link.dataset.position = "top";
-    link.dataset.tooltip = "Prikaži sve ture";
+  let elems_collapsible = document.querySelectorAll('.collapsible');
+  M.Collapsible.init(elems_collapsible, {});
 
-    let icon = document.createElement('i');
-    icon.classList.add('material-icons');
-    icon.innerText = "add";
+  checkLogin();
+});
 
-    link.appendChild(icon);
-    image_container.appendChild(image);
-    image_container.appendChild(link);
-
-    let card_content = document.createElement('div');
-    card_content.classList.add('card-content');
-
-    let city_name = document.createElement('span');
-    city_name.classList.add('card-title');
-    city_name.innerText = city.naziv;
-
-    let tours_num = document.createElement('h6');
-    tours_num.innerText = "Broj tura: " + city.brojAtrakcija;
+  document.getElementById("toggle-arrow").addEventListener("click", function () {
+    const aboutText = document.getElementById("about-text");
+    this.classList.toggle("rotate");
     
-    card_content.appendChild(city_name);
-    card_content.appendChild(tours_num);
-
-    card.appendChild(image_container);
-    card.appendChild(card_content);
-
-    column.appendChild(card);
-
-    document.getElementById('gradovi').appendChild(column);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    if (aboutText.classList.contains("show")) {
+      aboutText.classList.remove("show");
+      aboutText.style.maxHeight = "0";
+      aboutText.style.opacity = "0";
+    } else {
+      aboutText.classList.add("show");
+      aboutText.style.maxHeight = aboutText.scrollHeight + "px";
+      aboutText.style.opacity = "1";
+    }
+  });
+ document.addEventListener('DOMContentLoaded', function() {
+    AOS.init({
+      duration: 1500,  // Trajanje animacije
+      easing: 'ease',  // Easing funkcija
+      once: true,      // Da se animacija pokreće samo jednom
+    });
+  });
