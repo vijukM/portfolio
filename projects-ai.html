@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="sr">
+<html>
     <head>
         <title>Vijuk's CodePrint</title>
         <meta charset = "utf-8">
@@ -18,20 +18,18 @@
         <link rel = "stylesheet" href = "css/style.css">
     </head>
 <body>
-
-    <!-- Navigacija-->
-    <header>
+       <header>
         <div class="navbar-fixed">
             <nav>
                 <!--Hamburger ikonica za sidebar-->
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                 <div class = "nav-wrapper">
-                    <a class = "brand-logo" href = "#">
+                    <a class = "brand-logo" href = "index.html">
                         <img class="logo-img" style="border-radius: 5px;" src = https://i.ibb.co/prZpBJPv/file-00000000fca8620aa87293baf612aa2a-1.png" alt = "Logo">
                         <p class = "vijukCodePrint-font">Vijuk's CodePrint</p>
                     </a>
                     <ul class=" hide-on-med-and-down right margin-right" id = "navigation">
-                        <li class ="active"><a href="#">Početna</a></li>
+                        <li ><a href="#">Početna</a></li>
                         <li id = "admin" >Administrator</li>
                         <li id = "acc"><a>About me</a></li>
                         <li id = "login-btn"><a class=" waves-effect btn dark-pink modal-trigger" href="#modal-prijava"> </a></li>
@@ -46,142 +44,103 @@
     <span>Menu</span>
     <span class="close-btn" onclick="closeSidebar()">&times;</span>
   </div>
-      <li><a href="#my-projects" onclick="closeSidebar()">My projects</a></li>
-      <li><a href="#about-me" onclick="closeSidebar()">About me</a></li>
+      <li><a href="index.html#my-projects" onclick="closeSidebar()">My projects</a></li>
+      <li><a href="index.html#about-me" onclick="closeSidebar()">About me</a></li>
   </ul>
     </header>
-    <div class="scroll-progress-bar" id="scrollProgressBar"></div>
-
-
+        <div class="scroll-progress-bar" id="scrollProgressBar"></div>
     <!--Gornja pozadinska slika-->
     <div class="parallax-container height-200">
         <div class="parallax"><img src="https://www.securitymagazine.com/ext/resources/Issues/2022/july/cyber-security-freepik24.jpg?1662130127" alt = "Background"></div>
-    </div>
-
-    <!--Glavni sadrzaj-->
-    <main>
-        <div class="padded center">
-           
-            <div class="about-section">
-<h2 id="about-me">About Me<span class="material-icons toggle-arrow" data-target="about-text">expand_more</span></h2>    <div class="about-text" id="about-text">
-        <h5>Hello! I'm Miloš.</h5>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur luctus leo at iaculis cursus. Proin vehicula turpis augue, nec volutpat velit dignissim in. Donec id tempus dui. Sed ullamcorper elit vel velit interdum, in accumsan nibh tristique. Nullam erat leo, mattis sit amet metus vel, iaculis varius tellus. Nulla facilisi. Phasellus accumsan laoreet dui at porttitor. Quisque scelerisque posuere lorem, sed suscipit urna placerat sit amet. Suspendisse nec nibh sed dui porta mattis. Vestibulum dignissim consectetur turpis, a pulvinar tortor tempor hendrerit. Integer sed arcu lacus. Sed varius nisl ut stique enim.</p>
-    </div>
-    <div class="info-box">
-    <div class="about-content">
-    <div class="info-itemwpics">
-        <img src="https://i.ibb.co/t7tCqbZ/Screenshot-20210329-195131-Viber.jpg" alt="Tvoja slika" class="about-image">
-        <div class="text-info">
-        <h2 class="name-title" data-aos="zoom-in-up"  data-aos-once="true" style="color: black;">Miloš Vijuk</h2>
-        <h3 class="role-title" data-aos="zoom-in-down"  data-aos-once="true" >Full Stack Developer</h3>
+          <div class="project-name-heading"  >
+                 <div class="hanger left-hanger" ></div>
+                 <span >AI projects</span>
+                <div class="hanger right-hanger"></div>
         </div>
     </div>
+    <main>
+        <div class="toggle-section">
+
+            <h2 style="font-size: 30px; text-align: center; padding: 20px; margin: 0 auto;">Counting cats<span class="material-icons toggle-arrow" data-target="project-info">expand_more</span></h2>    
+        <div class="project-info" id="project-info">
+                <h5>Task</h5>
+            <p>Count how many cats there are in each of 10 images. It is necessary to create a solution that will achieve the smallest mean absolute error (MAE). The created solution is understood as code that will perform the same operations on each of the images present (e.g. different preprocessing of individual images is not allowed).</p>
+             <h5>Programming language:  Python</h5>
+             <h5>IDE: Visual Studio Code</h5>
+               <!-- VIDEO EMBED -->
+<div class="video-container">
+      <iframe
+        src="https://www.youtube-nocookie.com/embed/R2Mn11mZODI"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
     </div>
-  <div class="contact-info">
-    <div class="info-item" data-aos="fade-left"  data-aos-once="true">
-      <span class="material-icons contact-icon">email</span>
-      <a href="mailto:vijukmilos022@gmail.com?subject=Website%20feedback&body=Hello Miloš.">vijukmilos022@gmail.com</a>
+        </div>
+      </div>
+    <div class="image-slider"  data-aos="fade-down">
+        <div class="slider-arrow left-arrow" id="prev-button">&#10094;</div>
+
+    <!-- ovde dodaj id i aspect-ratio -->
+    <div class="cube" id="cube" >
+        <img class="face front" id="front-image"
+            src="https://i.ibb.co/Vcv7trGR/Screenshot-9.png" alt="Front" />
+        <img class="face back" id="back-image" src="" alt="Back" />
     </div>
-    <div class="info-item" data-aos="fade-right"  data-aos-once="true">
-      <span class="material-icons contact-icon">phone</span>
-      <a href="tel:+381612045180">+381612045180</a>
-    </div>
-    <div class="info-item" data-aos="fade-left"  data-aos-once="true">
-      <span class="material-icons contact-icon">home</span>
-      <h6>Novi Sad, Serbia</h6>
-    </div>
-    <div class="info-item" data-aos="fade-right"  data-aos-once="true">
-      <span class="material-icons contact-icon">school</span>
-      <h6>Faculty of Technical Sciences</h6>
-    </div>
-  </div>
+
+  <div class="slider-arrow right-arrow" id="next-button">&#10095;</div>
+.
+  <br>
+  .
 </div>
+
+ </main>
+ <div class="parallax-container" style="height: 70px; margin-top: -7px;">
+        <div class="parallax"><img src="https://technology.rogerscapital.mu/wp-content/uploads/2023/07/Cloud-and-Data-Banner-1.jpg" alt = "Background"></div>
+    </div>
+    <main>
+   <div class="toggle-section">
+
+            <h2 style="font-size: 7vw; text-align: center; padding: 20px; margin: 0 auto;">Counting goombas<span class="material-icons toggle-arrow" data-target="project-info2">expand_more</span></h2>    
+        <div class="project-info2" id="project-info2">
+                <h5>Task</h5>
+            <p>You need to count how many Goombies go behind the left hill in each video. It is necessary to create a solution that will achieve the smallest mean absolute error (MAE). The created solution means code that will perform the same operations on each video (eg, different preprocessing of individual videos is not allowed).</p>
+             <h5>Programming language:  Python</h5>
+             <h5>IDE: Visual Studio Code</h5>
+               <!-- VIDEO EMBED -->
+<div class="video-container">
+      <iframe
+        src="https://www.youtube-nocookie.com/embed/ock6q-8q4-Q"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+        </div>
+      </div>
+         <div class="image-slider"   data-aos-once="true" data-aos="fade-down">
+        <div class="slider-arrow left-arrow" id="prev-button2">&#10094;</div>
+    <div class="cube" id="cube2">
+        <img class="face front" id="front-image2"
+            src="https://i.ibb.co/bgcmn4Q8/Screenshot-14.png" alt="Front" />
+        <img class="face back" id="back-image2" src="" alt="Back" />
+    </div>
+  <div class="slider-arrow right-arrow" id="next-button2">&#10095;</div>
+.
+  <br>
+  .
 </div>
     </main>
 
-<!-- srednji deo parallax-a-->
+<!-- donji deo parallax-a-->
     <div class="parallax-container height-200">
         <div class="parallax"><img src="https://technology.rogerscapital.mu/wp-content/uploads/2023/07/Cloud-and-Data-Banner-1.jpg" alt = "Background"></div>
     </div>
 
-     <!--Glavni sadrzaj-->
-    <main>
-        <div class="padded center">
-           .
-            <h2 id="my-projects">My projects</h2>  
-            <p class = "paragraph">(O xnama) Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-               remaining essent and moresions of Lorem .</p>
-            <hr class = "dark-pink">
-     <div class = "projects-container" >
-                <div class="project-card web-card" style="background-image: url('https://dorve.com/wp-content/uploads/2021/03/web-development-services-cover.png');">
-                        <h2>Web </h2>
-                 </div>
-        <div class="card-wrapper" onclick="delayedRedirect()" style="cursor: pointer;">
-            <div class="project-card  ai-card" style="background-image: url('https://admin.live.ilo.org/sites/default/files/styles/xx_wide/public/2024-07/ai-technology-brain-background-digital-transformation-concept.jpg?itok=QF0jKKdF');">
-                <h2>AI </h2>
-            </div>
-        </div>
-                <div class="project-card graphic-card" style="background-image: url('https://invozone.com/static/9aef9cdb4d9d58c3fd42293ad15f3cb5/fastest_growing_programming_languages_e6fd2f2785.webp');">
-                <h2>Graphic </h2>
-                 </div>
-    </div>
-        </div>
-    </main>
-<!-- srednjadonji deo parallax-a-->
-    <div class="parallax-container height-200">
-        <div class="parallax"><img src="https://technology.rogerscapital.mu/wp-content/uploads/2023/07/Cloud-and-Data-Banner-1.jpg" alt = "Background"></div>
-    </div>
-<main>
-    .
-     <div class="category">
-    <h2>Programming Languages</h2>
-    <div class="icons-container" >
-      <img data-aos="fade-up" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg" />
-      <img data-aos="fade-up"src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" />
-      <img data-aos="fade-up" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg" />
-      <img data-aos="fade-up"src="https://img.icons8.com/?size=100&id=gVK745a4Vaur&format=png&color=000000" />
-      <img data-aos="fade-up"src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" />
-      <img data-aos="fade-down"src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" />
-      <img data-aos="fade-down"src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" />
-      <img data-aos="fade-down"src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" />
-      <img data-aos="fade-down"src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" />
-      <img data-aos="fade-down"src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" />
-    </div>
-  </div>
 
-  <div class="category">
-    <h2>Development Environments/IDEs</h2>
-    <div class="icons-container" data-aos="fade-up">
-      <img data-aos="fade-left" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/intellij/intellij-original.svg" />
-      <img data-aos="fade-right" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/eclipse/eclipse-original.svg" />
-      <img data-aos="fade-up"src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" />
-      <img data-aos="fade-left" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/visualstudio/visualstudio-original.svg" />
-      <img data-aos="fade-right" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqldeveloper/sqldeveloper-original.svg" />
-    </div>
-  </div>
-
-  <div class="category">
-    <h2>Other Tools and Technologies</h2>
-    <div class="icons-container" >
-      <img data-aos="fade-left" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" />
-      <img data-aos="fade-right" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" />
-      <img data-aos="fade-left"src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gitlab/gitlab-original.svg" />
-      <img data-aos="fade-right"src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original-wordmark.svg" />
-      <img data-aos="fade-left"src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azure/azure-original.svg" />
-      <img data-aos="fade-right"src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg" />
-      <img data-aos="fade-left" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jupyter/jupyter-original.svg" />
-      <img data-aos="fade-right"src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/ubuntu/ubuntu-original.svg" />
-      <img data-aos="fade-down"src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/matlab/matlab-original.svg" />
-      <img data-aos="fade-up" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/oracle/oracle-original.svg" />
-    </div>
-  </div>
-.  
-        </main>
-
-       <div class="parallax-container height-250">
-        <div class="parallax"><img src="https://media.licdn.com/dms/image/v2/D5612AQEvQU5DTiGRqw/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1679896039793?e=2147483647&v=beta&t=eWoPiKsYv6_6WZA6XlaM0dqR4Q3ELivTAsqDUN3ErkI" alt = "Background"></div>
-    </div>
-    <!--Footer-->
+           <!--Footer-->
     <footer class="page-footer">
         <div class="row">
             <div class="col s6 center">
@@ -207,7 +166,7 @@
                              </a>
                             <a data-social="GitHub" style="--accent-color: rgb(50, 33, 33);" href="https://github.com/vijukM">
                             <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>                            </a>
-                            <a data-social="YouTube" style="--accent-color: red;" href="https://www.youtube.com/channel/UCdCndgyiQJlWkR2NOLSYL6Q">
+                            <a data-social="YouTube" style="--accent-color: red;" href="https://youtube.com">
                             <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>YouTube</title><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
                             </a>
                             <a data-social="Instagram" style="--accent-color: #fe107c;" href="https://www.instagram.com/vijuk.milos/">

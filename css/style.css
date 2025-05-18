@@ -1,36 +1,52 @@
 *{
     font-family: 'Raleway', sans-serif;
+    
 }
 
+body {
+  overflow-x: hidden;
+}
 
 
 html{
     scroll-behavior: smooth;
 }
 
-nav{
-    background-color:#383c54;
-    padding-left: 1em;
+
+nav {
+  background:
+    repeating-linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.01) 0,
+      rgba(255, 255, 255, 0.01) 3px,
+      rgba(0, 0, 0, 0.01) 3px,
+      rgba(0, 0, 0, 0.01) 6px
+    ),
+    linear-gradient(to bottom right, #2a2d48, #3e466f);
+
+  padding-left: 1em;
+    border-bottom: 3px solid #2a2d48;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+
 }
+
 
 button{
     font-family: 'Raleway',sans-serif;
 }
 
 
-.dancing-font{
-    font-family: 'Dancing Script', cursive;
-    color:white;
-}
-
-.bigger-font{
-    font-size: 1.5em;
+.vijukCodePrint-font{
+    font-family: 'Courier New', monospace;
+    color:wheat;
+    font-size: 0.68em !important;
     font-weight: 700;
+    margin-left: 10px !important;
 }
 
 .logo-img{
     height: 90%;
-    margin-right: 15px;
+    margin-right: 0px !important;
 }
 
 #preporucene{
@@ -41,15 +57,14 @@ button{
     cursor: default;
 }
 
-tbody tr td{
-    width: 33.3333% !important;
-}
+
 
 .brand-logo{
     display: flex !important;
     align-items: center;
     height: 100%;
     width: fit-content;
+    margin-left: 10px;
 }
 
 .center{
@@ -57,50 +72,18 @@ tbody tr td{
 }
 
 
+
 .dark-pink{
-    background-color: #f07167;
+    background-color: #ec871b;
 }
 
-.bright-blue{
-    background-color:#00afb9 ;
-}
-
-.bright-blue-transparent{
-    background-color:rgba(0,176,185,0.6);
-}
-
-.disabled-link-side a{
-    color:rgba(0,0,0,0.5) !important;
-    cursor: default;
-}
-
-.disabled-link a{
-    color:rgba(255,255,255,0.7);
-    cursor: default;
-    
-
-}
-
-.backdrop{
-    background-color: purple !important;
-}
-.orange-transparent{
-    background-color:#8b8c89;
-}
-
-.white{
-    background-color:white;
-}
-
-
-
-.paragraph{
-    font-size:1.2em;
-    font-weight: 400;
-}
 
 h1,h2,h3,h4,h5{
     font-weight: 600;
+    color: wheat;
+}
+p{
+    color: whitesmoke;
 }
 
 hr{
@@ -110,6 +93,12 @@ hr{
     border:none;
 }
 
+.height-100{
+    height: 100px;
+}
+.height-200{
+    height: 200px;
+}
 .height-250{
     height: 250px;
 }
@@ -120,39 +109,19 @@ hr{
 
 
 
-.card-title{
-    font-weight:600 !important;
-}
 
 
-
-.col.m4{
-    display: flex;
-}
-
-.card{
-    display: flex;
-    flex-direction: column;
-}
-
-.card-image{
-    flex-grow: 1;
-}
-
-.card .card-image img {
-    height: 100%;
-}
-
-.col{
-    margin-left: 0 !important;
-}
-.card .card-content{
-    padding: 24px 5px 24px 5px;
-}
 
 .page-footer{
-    background-color: #383c54;
-
+  background:
+    repeating-linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.01) 0,
+      rgba(255, 255, 255, 0.01) 3px,
+      rgba(0, 0, 0, 0.01) 3px,
+      rgba(0, 0, 0, 0.01) 6px
+    ),
+    linear-gradient(to bottom right, #2a2d48, #3e466f);
 }
 
 .height-600{
@@ -189,7 +158,7 @@ footer a{
 
 
 .collapsible-header{
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .no-left{
@@ -248,10 +217,23 @@ footer a{
 margin-right: 1%;
 }
 main {
-      background-color: #383c54; /* Pozadinska boja */
-
+  background:
+    repeating-linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.01) 0,
+      rgba(255, 255, 255, 0.01) 3px,
+      rgba(0, 0, 0, 0.01) 3px,
+      rgba(0, 0, 0, 0.01) 6px
+    ),
+    linear-gradient(to bottom right, #2a2d48, #3e466f);  margin: 0 0px; /* Pomeranje sa leve i desne strane */
+  padding: 0px; /* Unutrašnje margine */
 }
 
+main h1:first-child,
+main h2:first-child {
+  margin-top: 0;
+}
+    
 .flex-container{
     display: flex;
     flex-direction: row;
@@ -326,9 +308,7 @@ ul.table-of-contents{
 }
 
 
-.margin-right-icon{
-    margin-right: 5px;
-}
+
 
 .margin-fixed{
     margin-top: 2em;
@@ -484,7 +464,75 @@ textarea{
 
 
 
+.sidenav {
+   width: 60vw; /* širina sidebar-a 75% širine viewporta */
+background: rgba(12, 15, 35, 0.75); /* Malo svetlija i jača pozadina */
+backdrop-filter: blur(6px); /* Malo jači blur */
+color: #eee; /* Svetlija boja teksta unutar sidebar */
+padding-top: 0; /* da bismo mogli lepo da stilizujemo header */
+display: flex;
+flex-direction: column;
+height: 100%;
+}
+
+.sidenav-header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 1.4rem 1.5rem;
+background: rgba(255, 255, 255, 0.1); /* Svetlija polu-prozirna pozadina za header */
+color: #f5f5f5;
+font-size: 1.8rem; /* Veći naslov */
+font-weight: 700;
+user-select: none;
+border-bottom: 1px solid rgba(255,255,255,0.15);
+position: relative;
+}
+
+.sidenav-header span.title {
+flex-grow: 1;
+}
+.sidenav li {
+border-bottom: 1px solid rgba(0, 0, 0, 0.82); /* linija između stavki */
+ background: #9fa6c2;
+
+}
+.sidenav li:last-child {
+border-bottom: none; /* poslednja nema donju liniju */
+}
+.sidenav li:hover {
+ background: #767c95;
+}
+.sidenav-header .close-btn {
+font-size: 2.4rem;
+color: #fff;
+cursor: pointer;
+padding: 0 15px;
+border-radius: 4px;
+transition: background-color 0.2s ease;
+margin-left: auto; /* guranje na desno */
+}
+
+.sidenav-header .close-btn:hover {
+background-color: #ff4c4c;
+}
+
+.sidenav a {
+color: #ddd; /* svetlija boja linkova */
+font-size: 1.15rem;
+padding: 14px 24px;
+display: block;
+transition: color 0.25s ease;
+}
+
+.sidenav a:hover {
+color: #0c0900;
+}
 @media only screen and (max-width:500px){
+    nav .sidenav-trigger{
+        margin: 0;
+    }
+
     .row .col.s6{
         width: 100%;
     }
@@ -493,9 +541,6 @@ textarea{
         text-align: center;
     }
 
-    nav .sidenav-trigger{
-        margin: 0;
-    }
 
     .logo-img{
         height: 80%;
@@ -601,6 +646,7 @@ textarea{
     display: flex;
     align-items: center;
     margin-bottom: 8px;
+    gap: 10px;
 }
 
 .contact-me i {
@@ -862,7 +908,7 @@ textarea{
   cursor: pointer;
   opacity: 0;
   pointer-events: none; /* Dugme ne reaguje kada je sakriveno */
-  transition: opacity 0.5s ease; /* Brzina fade efekta */
+  transition: opacity 0.9s ease; /* Brzina fade efekta */
 }
 
 #to-top-btn.show {
@@ -875,14 +921,8 @@ textarea{
   padding: 20px;
   margin: 0 auto;
 }
-.about-content {
-  display: flex;
-  gap: 0.2em;
-  align-items: flex-start;
-  margin-bottom: 1em;
-}
 .toggle-arrow {
-  cursor: pointer;
+    cursor: pointer;
   font-size: 48px; /* Povećana veličina strelice */
   transition: transform 0.9s ease;
   display: inline-flex;
@@ -893,6 +933,17 @@ textarea{
 
 .toggle-arrow.rotate {
   transform: rotate(180deg);
+}
+.project-info, .project-info2 {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.8s ease, opacity 0.8s ease;
+  opacity: 0;
+}
+
+.project-info.show,.project-info2.show {
+  max-height: 500px; /* Maksimalna visina kada je otvoreno */
+  opacity: 1;
 }
 
 .about-text {
@@ -907,17 +958,33 @@ textarea{
   opacity: 1;
 }
 .about-image {
-  width: 41%; /* Smanjivanje širine slike na polovinu */
-  height: auto; /* Održavanje proporcija slike */
-  clip-path: inset(0px 0% 0% 1px); 
-  border-radius: 2px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 41%; /* Smanjivanje širine slike na polovinu */
+    height: auto; /* Održavanje proporcija slike */
+    clip-path: inset(0px 0% 0% 1px); 
+    border-radius: 2px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.about-content {
+  display: flex;
+  gap: 0.2em;
+  align-items: center;
 }
 
+.info-itemwpics {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.text-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 20px; /* Pomeranje teksta nadole */
+  margin-left: 10px;
+}
 .info-box {
 position: relative;
-  background-color: #f4f4f4;
-  padding: 5%;
+  padding: 2%;
   border-radius: 8px;
   text-align: left;
   font-size: 1rem;
@@ -935,15 +1002,11 @@ position: relative;
     align-items: center;
     gap: 0; /* Nema razmaka između slika i info box-a */
   }
-
-
-
   .info-box {
-    width: 100%; /* Pravougaonik zauzima celu širinu ekrana */
-    margin: 0; /* Nema margine između slika i info box-a */
     padding: 10px; /* Povećaj padding da bude upotpunjen */
   }
 }
+
 .name-title {
   font-size: 1.8rem;
   font-weight: bold;
@@ -963,15 +1026,15 @@ position: relative;
   display: flex;
   flex-direction: column;
   gap: 7px; /* Ovaj razmak će sada biti jednak za sve stavke */
+  margin-top: 5px;
 }
-
 .info-item {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   gap: 10px;
-  
 }
+
 
 .info-item a,
 .info-item p {
@@ -988,4 +1051,298 @@ position: relative;
 .contact-icons {
   font-size: 24px; /* Veličina ikonica */
   color: #333;
+}
+
+/*Ovo je za drustvene mreze*/
+
+.socials-container{
+  display: flex;
+  gap: 15px;
+}
+.socials-container a{
+      position: relative; /* Ograničava tooltip na samo ikonicu */
+
+  background-color: white;
+  padding: 0.5em;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+}
+.socials-container a svg{
+  height: 18px;
+}
+.socials-container a::before{
+  content: attr(data-social);
+  position: absolute;
+  background-color: var(--accent-color);
+  color: white;
+  text-decoration: none;
+  padding: 0.3em 0.6em;
+  border-radius: 100px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+  transform: translateY(-30px) rotate(25deg);
+  opacity: 0;
+  transition: 400ms cubic-bezier(.42,0,.44,1.68);
+    pointer-events: none; /* Sprečava da hover reaguje na tooltip */
+
+}
+.socials-container a:hover{
+  background-color: var(--accent-color);
+  fill: white;
+  
+}
+.socials-container a::after{
+  content: '';
+  position: absolute;
+  height: 0;
+  width: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 10px solid var(--accent-color);
+  transform: translateY(0) rotate(25deg);
+  opacity: 0;
+  transition: 400ms cubic-bezier(.42,0,.44,1.68);
+}
+.socials-container a:hover::before{
+  transform: translateY(-65px) rotate(0);
+  opacity: 1;
+}
+.socials-container a:hover::after{
+  transform: translateY(-42px) rotate(0);
+  opacity: 1;
+}
+/*Ovo je za drustvene mreze*/
+
+
+    .scroll-progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #347cc9, #2883fa);
+            z-index: 9999;
+            transition: width 0.1s ease-out;
+            box-shadow: 0 0 15px rgba(255, 191, 0, 0.7), 0 0 25px rgba(255, 0, 128, 0.7);
+        }
+
+        #scrollProgressBar::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.6), transparent);
+            filter: blur(8px);
+        }
+
+        #scrollProgressBar.visible {
+            opacity: 1;
+        }
+
+        #scrollProgressBar.hidden {
+            opacity: 0;
+            transition: opacity 0.3s ease-out;
+        }
+
+        
+
+/*OVO SU IKONICE JEZIKA*/
+   .category {
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    .category h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .icons-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .icons-container img {
+      width: 60px;
+      height: 60px;
+      transition: transform 0.3s;
+      filter: brightness(0.8);
+    }
+
+    .icons-container img:hover {
+      transform: scale(1.1);
+      filter: brightness(1);
+    }        
+/*OVO SU IKONICE JEZIKA*/        
+
+.image-slider {
+  position: relative;
+  width: 70%;
+  height: 70%;
+  margin: 1px auto;
+  perspective: 1000px;
+  overflow: hidden;          /* da kocka ne štrči izvan */
+}
+
+.cube {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/16;        /* drži visinu usklađenu sa širinom */
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease-in-out;
+}
+
+.face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+}
+
+.front {
+  transform: rotateY(0deg);
+}
+
+.back {
+  transform: rotateY(180deg);
+}
+
+.slider-arrow {
+  position: absolute;
+  top: 35%;
+  font-size: 36px;
+  color: rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  user-select: none;
+  z-index: 2;
+}
+
+.slider-arrow:hover {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.left-arrow  { left:  2%; }
+.right-arrow { right: 2%; }
+
+
+.toggle-section {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 10px 1vw;
+}
+
+.toggle-section h2 {
+  font-size: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 ratio */
+  height: 0;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#about-me, #my-projects {
+  scroll-margin-top: 80px; /* ili koliko god ti treba da "povuče gore" */
+}
+
+.project-name-heading {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: flex-start; /* da se poravnaju po vrhu */
+  gap: 5px;
+  z-index: 10;
+  
+}
+
+/* Natpis sada spušten dole, da "visi" na kraju hanger-a */
+.project-name-heading span {
+  background: rgba(2, 6, 35, 0.9);
+  color: rgb(225, 173, 5);
+  font-size: 2.5rem;
+  padding: 0px 10px;
+  font-size: 37px;
+  border-radius: 8px;
+  font-weight: bold;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  text-align: center;
+
+  /* Pomera natpis dole koliko hanger ima visine */
+  margin-top: 57px; /* isto kao i visina hanger-a */
+  position: relative;
+}
+
+/* Hanger - glavni vertikalni kanap */
+.hanger {
+  position: relative;
+  width: 2px;
+  height: 60px;
+  background-color: black;
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.7);
+}
+
+/* Horizontalne linije na vrhu hanger-a (ka plafonu) */
+.hanger::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 2px;
+  background-color: black;
+  border-radius: 2px;
+}
+
+/* Horizontalne linije na dnu hanger-a (ka natpisu) */
+.hanger::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 12px;
+  height: 2px;
+  background-color: black;
+  border-radius: 2px;
+}
+
+/* Leva rotacija i oblik */
+.left-hanger {
+  border-top-left-radius: 5px;
+  transform-origin: top left;
+  transform: rotate(-10deg);
+}
+
+/* Desna rotacija i oblik */
+.right-hanger {
+  border-top-right-radius: 5px;
+  transform-origin: top right;
+  transform: rotate(10deg);
 }
