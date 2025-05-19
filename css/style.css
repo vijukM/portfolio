@@ -12,6 +12,12 @@ html{
     scroll-behavior: smooth;
 }
 
+header, main, footer, .parallax-container {
+ max-width: 1200px;
+  width: 100%;  
+  box-sizing: border-box;
+}
+
 
 nav {
   background:
@@ -535,14 +541,10 @@ color: #0c0900;
         width: 100%;
     }
 
-    .left-align{
-        text-align: center;
-    }
-
+  
 
     .logo-img{
         height: 80%;
-        margin-right: 5px;
     }
 
     .btn-large{
@@ -551,46 +553,8 @@ color: #0c0900;
         height: fit-content;
         width: fit-content;
     }
-
-
-    .flex-on-resize{
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .flex-on-resize .btn{
-        margin-bottom:10px
-    }
-
-    .row{
-        margin-bottom: 0;
-    }
-
-    .slider .slides li .caption{
-        width: 100%;
-        text-align: center;
-    }
-
-    .indicator-item{
-        height: 11px !important;
-        width: 11px !important;
-    }
-
-
-    .slider{
-        height: 450px !important;
-    }
-
-    .slides{
-        height: 400px !important;
-    }
-
     .padded{
         padding: 1em;
-    }
-
-    .short-desc-img,.width-60{
-        width: 90%;
     }
 
     .hr-width-smaller{
@@ -605,21 +569,6 @@ color: #0c0900;
         font-size: 25px !important;
     }
 
-    .progress{
-        height: 10px;
-    }
-
-    .progress-margin-bottom{
-        margin-bottom: 0.5em;
-    }
-
-    .margin-left{
-        margin-left: 0.5em;
-    }
-
-    .margin-fixed,.margin-on-resize{
-        margin-top: 1.2em;
-    }
 
     .brand-logo{
         width: max-content;
