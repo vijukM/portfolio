@@ -3,21 +3,14 @@
     
 }
 
-body {
-  overflow-x: hidden;
-}
+
 
 
 html{
     scroll-behavior: smooth;
 }
 
-header, main, footer, .parallax-container {
- max-width: 1500px;
-  width: 100%;  
-   margin: 0 auto;       /* Centrira unutar viewporta */
-  box-sizing: border-box;
-}
+
 
 
 nav {
@@ -29,8 +22,7 @@ nav {
       rgba(0, 0, 0, 0.01) 3px,
       rgba(0, 0, 0, 0.01) 6px
     ),
-    linear-gradient(to bottom right, #2a2d48, #3e466f);
-
+    linear-gradient(to bottom right, #373d72, #1d2343);
   padding-left: 1em;
     border-bottom: 3px solid #2a2d48;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
@@ -38,15 +30,12 @@ nav {
 }
 
 
-button{
-    font-family: 'Raleway',sans-serif;
-}
 
 
 .vijukCodePrint-font{
-    font-family: 'Courier New', monospace;
-    color:wheat;
-    font-size: 0.68em !important;
+  font-family: 'Share Tech Mono', monospace;
+    color: whitesmoke;
+    font-size: 0.7em !important;
     font-weight: 700;
     margin-left: 10px !important;
 }
@@ -87,18 +76,13 @@ button{
 
 h1,h2,h3,h4,h5{
     font-weight: 600;
-    color: wheat;
+    color: whitesmoke;
+    
 }
 p{
     color: whitesmoke;
 }
 
-hr{
-    width: 70%;
-    height: 3px;
-    background-color: black;
-    border:none;
-}
 
 .height-100{
     height: 100px;
@@ -114,11 +98,6 @@ hr{
     height: 300px;
 }
 
-
-
-
-
-
 .page-footer{
   background:
     repeating-linear-gradient(
@@ -128,18 +107,13 @@ hr{
       rgba(0, 0, 0, 0.01) 3px,
       rgba(0, 0, 0, 0.01) 6px
     ),
-    linear-gradient(to bottom right, #2a2d48, #3e466f);
+  linear-gradient(to bottom right, #373d72, #1d2343);
 }
 
 .height-600{
     height: 600px !important;
 }
 
-footer i,footer img{
-    position: relative;
-    right:5px;
-    top:6px;
-}
 
 .left-align{
     text-align: left;
@@ -149,24 +123,9 @@ footer i,footer img{
     flex-basis: auto;
 }
 
-footer a{
-    text-decoration: none;
-    color: white;
-}
 
 
-.modal{
-    color:black;
-}
 
-.no-float{
-    float:none;
-}
-
-
-.collapsible-header{
-    justify-content: flex-start;
-}
 
 .no-left{
     text-align: unset;
@@ -232,9 +191,10 @@ main {
       rgba(0, 0, 0, 0.01) 3px,
       rgba(0, 0, 0, 0.01) 6px
     ),
-    linear-gradient(to bottom right, #2a2d48, #3e466f);  margin: 0 0px; /* Pomeranje sa leve i desne strane */
+    linear-gradient(to bottom right, #373d72, #1d2343);  margin: 0 0px; /* Pomeranje sa leve i desne strane */
   padding: 0px; /* Unutrašnje margine */
 }
+
 
 main h1:first-child,
 main h2:first-child {
@@ -500,6 +460,7 @@ flex-grow: 1;
 .sidenav li {
 border-bottom: 1px solid rgba(0, 0, 0, 0.82); /* linija između stavki */
  background: #9fa6c2;
+  background-color: rgba(#9fa6c2, 0.5); /* bela boja, 50% providnosti */
 
 }
 .sidenav li:last-child {
@@ -558,13 +519,7 @@ color: #0c0900;
         padding: 1em;
     }
 
-    .hr-width-smaller{
-        width: 80%;
-    }
-
-    .modal .modal-content{
-        padding: 24px 15px;
-    }
+   
 
     .medium-size-icon{
         font-size: 25px !important;
@@ -939,7 +894,8 @@ position: relative;
   max-width: 400px;
   margin: 0 auto;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  background-color: #bfe2e7;
+  background: linear-gradient(to bottom right, #76e1f1, #bfe2e7);
+
 }
 /* Na manjim ekranima (mobilni uređaji) */
 @media (max-width: 768px) {
@@ -1005,10 +961,10 @@ position: relative;
 .socials-container{
   display: flex;
   gap: 15px;
+  margin-top: -10px;
 }
 .socials-container a{
       position: relative; /* Ograničava tooltip na samo ikonicu */
-
   background-color: white;
   padding: 0.5em;
   border-radius: 50%;
@@ -1118,8 +1074,8 @@ position: relative;
     }
 
     .icons-container img {
-      width: 60px;
-      height: 60px;
+      width: 50px;
+      height: 50px;
       transition: transform 0.3s;
       filter: brightness(0.8);
     }
@@ -1199,11 +1155,13 @@ position: relative;
 
 .video-container {
   position: relative;
-  width: 100%;
+  max-width: 600px;       /* maksimalna širina */
+    width: 70%;
+  height: 70%;
   padding-bottom: 56.25%; /* 16:9 ratio */
   height: 0;
   overflow: hidden;
-  margin-top: 20px;
+  margin: 20px auto;       /* centriranje + razmak odozgo/dole */
 }
 
 .video-container iframe {
