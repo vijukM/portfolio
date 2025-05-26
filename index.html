@@ -8,7 +8,7 @@
         <link rel = "icon" href = https://i.ibb.co/prZpBJPv/file-00000000fca8620aa87293baf612aa2a-1.png">
 
         <!-- Google font linkovi -->
-
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
          <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -25,7 +25,6 @@
     <header>
         <div class="navbar-fixed">
             <nav>
-                <!--Hamburger ikonica za sidebar-->
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                 <div >
                     <a class = "brand-logo" href = "#">
@@ -33,7 +32,10 @@
                         <p class = "vijukCodePrint-font">Vijuk's CodePrint</p>
                     </a>
                     <ul class=" hide-on-med-and-down right margin-right" id = "navigation">
-                        <li id = "acc"><a>About me</a></li>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#about-me">About me</a></li>
+                        <li><a href="#my-projects">My projects</a></li>
+                        <li><a href="#contact-me">Contact me</a></li>
                     </ul>
                 </div>
             </nav>
@@ -45,11 +47,13 @@
     <span>Menu</span>
     <span class="close-btn" onclick="closeSidebar()">&times;</span>
   </div>
-      <li><a href="#my-projects" onclick="closeSidebar()">My projects</a></li>
-      <li><a href="#about-me" onclick="closeSidebar()">About me</a></li>
+    <li><a href="#about-me" onclick="closeSidebar()"><i class="fas fa-user"></i> About me</a></li>
+  <li><a href="#my-projects" onclick="closeSidebar()"><i class="fas fa-code"></i> My projects</a></li>
+  <li><a href="#contact-me" onclick="closeSidebar()"><i class="fas fa-envelope"></i> Contact me</a></li>
+
   </ul>
+  <div class="scroll-progress-bar" id="scrollProgressBar"></div>
     </header>
-    <div class="scroll-progress-bar" id="scrollProgressBar"></div>
 
 
     <!--Gornja pozadinska slika-->
@@ -60,20 +64,32 @@
        <main>
         <div class="padded center">
            
-            <div class="about-section">
-<h2 id="about-me">About Me<span class="material-icons toggle-arrow" data-target="about-text">expand_more</span></h2>   
+            <div class="about-section" >
+<h2 id="about-me" data-aos="fade-up">About Me<span class="material-icons toggle-arrow" data-target="about-text">expand_more</span></h2>   
  <div class="about-text" id="about-text">
         <h5>Hello! I'm Miloš.</h5>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur luctus leo at iaculis cursus. Proin vehicula turpis augue, nec volutpat velit dignissim in. Donec id tempus dui. Sed ullamcorper elit vel velit interdum, in accumsan nibh tristique. Nullam erat leo, mattis sit amet metus vel, iaculis varius tellus. Nulla facilisi. Phasellus accumsan laoreet dui at porttitor. Quisque scelerisque posuere lorem, sed suscipit urna placerat sit amet. Suspendisse nec nibh sed dui porta mattis. Vestibulum dignissim consectetur turpis, a pulvinar tortor tempor hendrerit. Integer sed arcu lacus. Sed varius nisl ut stique enim.</p>
-    </div>
-    <div class="info-box">
+      <p> Motivated and dedicated final-year student at the Faculty of Technical
+            Sciences, University of Novi Sad, majoring in Computer Science and
+            Automation, specializing in Applied Computer Science and Informatics. <br> <br>
+            During the 7th semester, I worked as a teaching assistant for the course
+            <em>Compilers</em>, helping students understand theoretical and practical
+            concepts related to compilers and interpreters.<br><br>
+            I participated in the International Physics Competition (2023) and the <em>National Geographic Olympiad</em>  (2020). <br><br>
+            I was a recipient of the Ministry of Education scholarship, a beneficiary of the
+            <em>Privrednik</em> Foundation, and awarded a special scholarship for exceptionally
+            gifted pupils and students; Currently, I hold a scholarship from the Fund for
+            <em>Young Talents of Serbia</em>.</p>
+        </div>
+    <div class="info-box" data-aos="fade-down">
     <div class="about-content">
     <div class="info-itemwpics">
         <img src="https://i.ibb.co/t7tCqbZ/Screenshot-20210329-195131-Viber.jpg" alt="Tvoja slika" class="about-image">
         <div class="text-info">
         <h2 class="name-title" data-aos="zoom-in-up"  data-aos-once="true" style="color: black;">Miloš Vijuk</h2>
-        <h3 class="role-title" data-aos="zoom-in-down"  data-aos-once="true" >Full Stack Developer</h3>
-        </div>
+            <h3 class="role-title" id="typing-text">
+                <span id="text-content"></span><span id="cursor" class="cursor">|</span>
+            </h3>    
+    </div>
     </div>
     </div>
   <div class="contact-info">
@@ -83,7 +99,7 @@
     </div>
     <div class="info-item" data-aos="fade-right"  data-aos-once="true">
       <span class="material-icons contact-icon">phone</span>
-      <a href="tel:+381612045180">+381612045180</a>
+      <a href="tel:+381612045180">+381 612045180</a>
     </div>
     <div class="info-item" data-aos="fade-right"  data-aos-once="true">
       <span class="material-icons contact-icon">home</span>
@@ -108,8 +124,7 @@
         <div class="padded center">
            .
             <h2 id="my-projects">My projects</h2>  
-            <p class = "paragraph">(O xnama) Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-               remaining essent and moresions of Lorem .</p>
+            <p class = "paragraph">During my studies, I worked on developing web applications, desktop software, AI exercises, and computer graphics projects, gaining a broad foundation in modern IT technologies.</p>
         <hr class="dark-pink" style="border: none;border-top: 3px solid #ec871b;">
      <div class = "projects-container" >
                 <div class="project-card web-card" style="background-image: url('https://dorve.com/wp-content/uploads/2021/03/web-development-services-cover.png');">
@@ -123,6 +138,11 @@
                 <div class="project-card graphic-card" style="background-image: url('https://invozone.com/static/9aef9cdb4d9d58c3fd42293ad15f3cb5/fastest_growing_programming_languages_e6fd2f2785.webp');">
                 <h2>Graphic </h2>
                  </div>
+        <div class="card-wrapper" onclick="delayedRedirect()" style="cursor: pointer;">
+            <div class="project-card  desktop-card" style="background-image: url('data:image/jpeg;base64,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');">
+                <h2>Desktop</h2>
+            </div>
+        </div>
     </div>
         </div>
     </main>
@@ -143,14 +163,14 @@
       <img data-aos="fade-right"src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" />
       <img data-aos="fade-down"src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" />
       <img data-aos="fade-right"src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" />
-      <img data-aos="fade-right"src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" />
+      <img data-aos="fade-down"src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" />
       <img data-aos="fade-right"src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" />
     </div>
   </div>
 
   <div class="category">
     <h2>Development Environments/IDEs</h2>
-    <div class="icons-container" data-aos="fade-up">
+    <div class="icons-container" >
       <img data-aos="fade-down" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/intellij/intellij-original.svg" />
       <img data-aos="fade-up" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/eclipse/eclipse-original.svg" />
       <img data-aos="fade-down"src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" />
@@ -166,12 +186,17 @@
       <img data-aos="fade-up" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" />
       <img data-aos="fade-down"src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gitlab/gitlab-original.svg" />
       <img data-aos="fade-up"src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original-wordmark.svg" />
-      <img data-aos="fade-down"src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azure/azure-original.svg" />
+      <img data-aos="fade-down" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg" />     
       <img data-aos="fade-up"src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg" />
+      <img data-aos="fade-down" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/oracle/oracle-original.svg" />
       <img data-aos="fade-down" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jupyter/jupyter-original.svg" />
       <img data-aos="fade-up"src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/ubuntu/ubuntu-original.svg" />
       <img data-aos="fade-down"src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/matlab/matlab-original.svg" />
-      <img data-aos="fade-up" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/oracle/oracle-original.svg" />
+      <img  data-aos="fade-up"src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original-wordmark.svg" />
+      <img data-aos="fade-down"src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/opengl/opengl-original.svg" />
+      <img  data-aos="fade-up"src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angular/angular-original.svg" /> 
+      <img data-aos="fade-down"src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dotnetcore/dotnetcore-original.svg" />
+      <img  data-aos="fade-up"src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/trello/trello-original.svg" />
     </div>
   </div>
 .  
@@ -186,7 +211,7 @@
             <div class="col s6 center">
                 <h4 class="white-text">Contact me</h4>
                 <hr class = "white hr-smaller-width">
-                <div class="contact-me">
+                <div class="contact-me" id="contact-me">
                      <ul>
                         <li><span class = "material-icons">home</span> Novi Sad, Serbia</li>
                         <li><span class="material-icons contact-icon">phone</span> <a href="tel:+381612045180">+381612045180</a></li>
@@ -216,7 +241,7 @@
             </div>
         </div>
         <div class="footer-copyright">
-            <div class="container center">© 2025 M.V.</div>
+            <div class="container center">© 2025 Miloš Vijuk. All rights reserved.</div>
         </div>
     </footer>
 
@@ -227,12 +252,11 @@
 
 
 <!--Custom skripta-->
-<script src = "javascript/index.js"></script>
 
 <!--Materialize js-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-
+<script src = "javascript/index.js"></script>
 </body>
 </html>

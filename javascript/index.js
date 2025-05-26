@@ -64,7 +64,6 @@ document.addEventListener('DOMContentLoaded', function() {
   let elems_collapsible = document.querySelectorAll('.collapsible');
   M.Collapsible.init(elems_collapsible, {});
 
-  checkLogin();
 });
 
  document.querySelectorAll(".toggle-arrow").forEach(arrow => {
@@ -138,7 +137,56 @@ document.addEventListener('DOMContentLoaded', function() {
         });
       });
     });
+  document.addEventListener('DOMContentLoaded', function() {
+    const navLinks = document.querySelectorAll('#navigation li a');
+    const sections = document.querySelectorAll('#about-me, #my-projects, #contact-me');
+ // Funkcija koja menja active na osnovu scroll pozicije
+  function onScroll() {
+    let scrollPos = window.scrollY || window.pageYOffset;
+    let windowHeight = window.innerHeight;
+    let docHeight = document.documentElement.scrollHeight;
+    if(scrollPos < 50) {
+      navLinks.forEach(link => link.classList.remove('active'));
+      const homeLink = document.querySelector('#navigation li a[href="#"]');
+      if(homeLink) homeLink.classList.add('active');
+      return;
+    }
+       // Ako smo na dnu stranice (ili blizu nje), aktiviraj contact-me
+    if(scrollPos + windowHeight >= docHeight - 5) { 
+      navLinks.forEach(link => link.classList.remove('active'));
+      const contactLink = document.querySelector('#navigation li a[href="#contact-me"]');
+      if(contactLink) contactLink.classList.add('active');
+      return;
+    }
 
+    sections.forEach(section => {
+      const top = section.offsetTop - 100;
+      const bottom = top + section.offsetHeight;
+
+      if(scrollPos >= top && scrollPos < bottom) {
+        const id = section.getAttribute('id');
+        navLinks.forEach(link => link.classList.remove('active'));
+        const activeLink = document.querySelector(`#navigation li a[href="#${id}"]`);
+        if(activeLink) activeLink.classList.add('active');
+      }
+    });
+  }
+
+  // Dodaj event listener za scroll
+  window.addEventListener('scroll', onScroll);
+
+  // Dodaj event listener za klik na linkove
+  navLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      // On klik ukloni active sa svih i dodeli na kliknuti
+      navLinks.forEach(l => l.classList.remove('active'));
+      this.classList.add('active');
+    });
+  });
+
+  // Pokreni jednom da inicijalno postavi active
+  onScroll();
+});
         const images_goombas = [
       "https://i.ibb.co/bgcmn4Q8/Screenshot-14.png",
       "https://i.ibb.co/zWYfCd4D/Screenshot-13.png" ,
@@ -188,16 +236,58 @@ document.addEventListener('DOMContentLoaded', function() {
       cube.removeEventListener("transitionend", handler);
     }, { once: true });
   }
+window.addEventListener('load', function () {
+  setTimeout(() => {
+    const firstText = "Full Snack Dev";
+    const finalText = "Full Stack Developer";
+    const textContent = document.getElementById("text-content");
+    const cursor = document.getElementById("cursor");
 
-  nextBtn.addEventListener("click", () => {
-    const ni = (currentIndex + 1) % images_cats.length;
-    flipTo(ni, 'prev');
-  });
-  
-  prevBtn.addEventListener("click", () => {
-    const ni = (currentIndex - 1 + images_cats.length) % images_cats.length;
-    flipTo(ni, 'next');
-  });
+    let index = 0;
+
+
+    function typeFirstText() {
+        if (index < firstText.length) {
+            textContent.textContent += firstText.charAt(index);
+            index++;
+            setTimeout(typeFirstText, 120);
+        } else {
+            setTimeout(startDeleting, 1000); // pause before deleting
+        }
+    }
+
+    function startDeleting() {
+        const targetLength = 6; // length of "Full S"
+        let currentText = textContent.textContent;
+        if (currentText.length > targetLength) {
+            textContent.textContent = currentText.slice(0, -1);
+            setTimeout(startDeleting, 50);
+        } else {
+            index = targetLength; // resume from "Full S"
+            setTimeout(typeFinalText, 300);
+        }
+    }
+
+    function typeFinalText() {
+        if (index < finalText.length) {
+            textContent.textContent += finalText.charAt(index);
+            index++;
+            setTimeout(typeFinalText, 100);
+        } else {
+            cursor.classList.add('stop-blink');
+        }
+    }
+
+    typeFirstText();
+      }, 1700); // 500ms = 0.5 sekunde
+
+});
+    function delayedRedirect() {
+    setTimeout(() => {
+      window.location.href = 'projects-ai.html';
+    }, 200); // 500 milisekundi = 0.5 sekundi
+  }
+ 
 
   let currentIndex2 = 0;
   let rotating2 = false;
@@ -236,6 +326,62 @@ document.addEventListener('DOMContentLoaded', function() {
     }, { once: true });
   }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*OVO MORA NA KRAJ NE PITAJ ZASTO*/
+/*OVO MORA NA KRAJ NE PITAJ ZASTO*/
+/*OVO MORA NA KRAJ NE PITAJ ZASTO*/
+/*OVO MORA NA KRAJ NE PITAJ ZASTO*/
+/*OVO MORA NA KRAJ NE PITAJ ZASTO*/
+/*OVO MORA NA KRAJ NE PITAJ ZASTO*/
   nextBtn2.addEventListener("click", () => {
     const ni = (currentIndex2 + 1) % images_goombas.length;
     flipTo2(ni, 'prev');
@@ -246,12 +392,12 @@ document.addEventListener('DOMContentLoaded', function() {
     flipTo2(ni, 'next');
   });
 
-
-    function delayedRedirect() {
-    setTimeout(() => {
-      window.location.href = 'projects-ai.html';
-    }, 200); // 500 milisekundi = 0.5 sekundi
-  }
-
-
+  nextBtn.addEventListener("click", () => {
+    const ni = (currentIndex + 1) % images_cats.length;
+    flipTo(ni, 'prev');
+  });
   
+  prevBtn.addEventListener("click", () => {
+    const ni = (currentIndex - 1 + images_cats.length) % images_cats.length;
+    flipTo(ni, 'next');
+  });

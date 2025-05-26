@@ -9,7 +9,7 @@
 
         <!-- Google font linkovi -->
                   <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
-
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Raleway:wght@300&display=swap" rel="stylesheet">
@@ -31,7 +31,7 @@
                         <p class = "vijukCodePrint-font">Vijuk's CodePrint</p>
                     </a>
                     <ul class=" hide-on-med-and-down right margin-right" id = "navigation">
-                        <li id = "acc"><a>About me</a></li>
+                        <li><a href="index.html">Home</a></li>
                     </ul>
                 </div>
             </nav>
@@ -43,8 +43,9 @@
     <span>Menu</span>
     <span class="close-btn" onclick="closeSidebar()">&times;</span>
   </div>
-      <li><a href="index.html#my-projects" onclick="closeSidebar()">My projects</a></li>
-      <li><a href="index.html#about-me" onclick="closeSidebar()">About me</a></li>
+       <li><a href="index.html#about-me" onclick="closeSidebar()"><i class="fas fa-user"></i> About me</a></li>
+  <li><a href="index.html#my-projects" onclick="closeSidebar()"><i class="fas fa-code"></i> My projects</a></li>
+  <li><a href="index.html#contact-me" onclick="closeSidebar()"><i class="fas fa-envelope"></i> Contact me</a></li>
   </ul>
     </header>
         <div class="scroll-progress-bar" id="scrollProgressBar"></div>
@@ -60,10 +61,14 @@
     <main>
         <div class="toggle-section">
 
-            <h2 style="font-size: 30px; text-align: center; padding: 20px; margin: 0 auto;">Counting cats<span class="material-icons toggle-arrow" data-target="project-info">expand_more</span></h2>    
+<h2 style="font-size: 25px;transform: translateX(10px); text-align: center; padding: 10px; margin: 0 auto;">
+  Counting cats<span class="material-icons toggle-arrow" data-target="project-info" style="font-size: 40px; vertical-align: middle; display: inline-block; transform: translateX(-10px);">expand_more</span>
+</h2>
+
+
         <div class="project-info" id="project-info">
                 <h5>Task</h5>
-            <p>Count how many cats there are in each of 10 images. It is necessary to create a solution that will achieve the smallest mean absolute error (MAE). The created solution is understood as code that will perform the same operations on each of the images present (e.g. different preprocessing of individual images is not allowed).</p>
+            <p class="task-text">Count how many cats there are in each of 10 images. It is necessary to create a solution that will achieve the smallest mean absolute error (MAE). The created solution is understood as code that will perform the same operations on each of the images present (e.g. different preprocessing of individual images is not allowed).</p>
              <h5>Programming language:  Python</h5>
              <h5>IDE: Visual Studio Code</h5>
                <!-- VIDEO EMBED -->
@@ -102,11 +107,13 @@
     <main>
    <div class="toggle-section">
 
-            <h2 style="font-size: 7vw; text-align: center; padding: 20px; margin: 0 auto;">Counting goombas<span class="material-icons toggle-arrow" data-target="project-info2">expand_more</span></h2>    
+            <h2 style="font-size: 23px; text-align: center;transform: translateX(10px); padding: 20px; margin: 0 auto;">Counting goombas<span class="material-icons toggle-arrow" style="transform: translateX(-10px); font-size: 40px"  data-target="project-info2">expand_more</span></h2>    
         <div class="project-info2" id="project-info2">
                 <h5>Task</h5>
-            <p>You need to count how many Goombies go behind the left hill in each video. It is necessary to create a solution that will achieve the smallest mean absolute error (MAE). The created solution means code that will perform the same operations on each video (eg, different preprocessing of individual videos is not allowed).</p>
-             <h5>Programming language:  Python</h5>
+            <p class="task-text">
+            You need to count how many Goombies go behind the left hill in each video. It is necessary to create a solution that will achieve the smallest mean absolute error (MAE). The created solution means code that will perform the same operations on each video (eg, different preprocessing of individual videos is not allowed).    
+            </p>   
+          <h5>Programming language:  Python</h5>
              <h5>IDE: Visual Studio Code</h5>
                <!-- VIDEO EMBED -->
 <div class="video-container">
