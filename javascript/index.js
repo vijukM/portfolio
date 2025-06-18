@@ -199,6 +199,31 @@ document.addEventListener('DOMContentLoaded', function() {
     "https://i.ibb.co/5WkTwnFB/Screenshot-10.png",
     "https://i.ibb.co/RVjGT4s/Screenshot-12.png"
   ];
+  const images_pacman2D = [
+    "https://i.ibb.co/Y7N479Z2/Screenshot-7.png",
+    "https://i.ibb.co/mr3b2VDP/Screenshot-8.png",
+    "https://i.ibb.co/998shT0X/Screenshot-4.png",
+    "https://i.ibb.co/gFyFPCdd/Screenshot-9.png"
+];
+const images_pacman3D = [
+  "https://i.ibb.co/7NZJsP9r/Screenshot-10.png",
+  "https://i.ibb.co/Ldp7ZdmP/Screenshot-13.png",
+  "https://i.ibb.co/XxvqX67L/Screenshot-12.png",
+  "https://i.ibb.co/BVLrp7Mh/Screenshot-14.png"
+];
+let images_current1;
+let images_current2;
+if (window.location.pathname.includes('projects-ai.html')) {
+  images_current1 = images_cats;
+  images_current2 = images_goombas;
+} else if (window.location.pathname.includes('projects-graphic.html')) {
+  images_current1 = images_pacman2D;
+  images_current2 = images_pacman3D;
+} else {
+  images_current1 = [];
+  images_current2 = [];
+  console.warn("Ne znam koji niz slika da koristim za ovu stranicu.");
+}
 
   let currentIndex = 0;
   let rotating = false;
@@ -210,7 +235,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const prevBtn  = document.getElementById("prev-button");
 
   function prepareBack(newIndex) {
-    backImg.src = images_cats[newIndex];
+    backImg.src = images_current1[newIndex];
   }
 
   function flipTo(newIndex, dir) {
@@ -224,7 +249,7 @@ document.addEventListener('DOMContentLoaded', function() {
     cube.style.transform = `rotateY(${angle}deg)`;
 
     cube.addEventListener("transitionend", function handler() {
-      frontImg.src = images_cats[newIndex];
+      frontImg.src = images_current1[newIndex];
       currentIndex = newIndex;
 
       cube.style.transition = "none";
@@ -279,12 +304,17 @@ window.addEventListener('load', function () {
     }
 
     typeFirstText();
-      }, 1700); // 500ms = 0.5 sekunde
+      }, 1000); // 500ms = 0.5 sekunde
 
 });
-    function delayedRedirect() {
+    function delayedRedirectAI() {
     setTimeout(() => {
       window.location.href = 'projects-ai.html';
+    }, 200); 
+  }
+    function delayedRedirectGraphic() {
+    setTimeout(() => {
+      window.location.href = 'projects-graphic.html';
     }, 200); // 500 milisekundi = 0.5 sekundi
   }
  
@@ -299,7 +329,7 @@ window.addEventListener('load', function () {
   const prevBtn2  = document.getElementById("prev-button2");
 
   function prepareBack2(newIndex2) {
-    backImg2.src = images_goombas[newIndex2];
+    backImg2.src = images_current2[newIndex2];
   }
 
   function flipTo2(newIndex2, dir) {
@@ -313,7 +343,7 @@ window.addEventListener('load', function () {
     cube2.style.transform = `rotateY(${angle}deg)`;
 
     cube2.addEventListener("transitionend", function handler() {
-      frontImg2.src = images_goombas[newIndex2];
+      frontImg2.src = images_current2[newIndex2];
       currentIndex2 = newIndex2;
 
       cube2.style.transition = "none";
@@ -383,21 +413,21 @@ window.addEventListener('load', function () {
 /*OVO MORA NA KRAJ NE PITAJ ZASTO*/
 /*OVO MORA NA KRAJ NE PITAJ ZASTO*/
   nextBtn2.addEventListener("click", () => {
-    const ni = (currentIndex2 + 1) % images_goombas.length;
+    const ni = (currentIndex2 + 1) % images_current2.length;
     flipTo2(ni, 'prev');
   });
   
   prevBtn2.addEventListener("click", () => {
-    const ni = (currentIndex2 - 1 + images_goombas.length) % images_goombas.length;
+    const ni = (currentIndex2 - 1 + images_current2.length) % images_current2.length;
     flipTo2(ni, 'next');
   });
 
   nextBtn.addEventListener("click", () => {
-    const ni = (currentIndex + 1) % images_cats.length;
+    const ni = (currentIndex + 1) % images_current1.length;
     flipTo(ni, 'prev');
   });
   
   prevBtn.addEventListener("click", () => {
-    const ni = (currentIndex - 1 + images_cats.length) % images_cats.length;
+    const ni = (currentIndex - 1 + images_current1.length) % images_current1.length;
     flipTo(ni, 'next');
   });
