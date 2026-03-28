@@ -188,28 +188,28 @@ document.addEventListener('DOMContentLoaded', function() {
   onScroll();
 });
         const images_goombas = [
-      "https://i.ibb.co/bgcmn4Q8/Screenshot-14.png",
-      "https://i.ibb.co/zWYfCd4D/Screenshot-13.png" ,
-    "https://i.ibb.co/p67tbz9B/Screenshot-15.png"
+      "data/images/goombas/1.png",
+      "data/images/goombas/2.png",
+      "data/images/goombas/3.png"
   ];
  
 
      const images_cats = [
-    "https://i.ibb.co/Z65M1RTL/Screenshot-9.png",
-    "https://i.ibb.co/5WkTwnFB/Screenshot-10.png",
-    "https://i.ibb.co/RVjGT4s/Screenshot-12.png"
+    "data/images/cats/1.png",
+    "data/images/cats/2.png",
+    "data/images/cats/3.png"
   ];
   const images_pacman2D = [
-    "https://i.ibb.co/Y7N479Z2/Screenshot-7.png",
-    "https://i.ibb.co/mr3b2VDP/Screenshot-8.png",
-    "https://i.ibb.co/998shT0X/Screenshot-4.png",
-    "https://i.ibb.co/gFyFPCdd/Screenshot-9.png"
+    "data/images/pacman-2D/1.png",
+    "data/images/pacman-2D/2.png",
+    "data/images/pacman-2D/3.png",
+    "data/images/pacman-2D/4.png"
 ];
 const images_pacman3D = [
-  "https://i.ibb.co/7NZJsP9r/Screenshot-10.png",
-  "https://i.ibb.co/Ldp7ZdmP/Screenshot-13.png",
-  "https://i.ibb.co/XxvqX67L/Screenshot-12.png",
-  "https://i.ibb.co/BVLrp7Mh/Screenshot-14.png"
+  "data/images/pacman-3D/1.png",
+  "data/images/pacman-3D/2.png",
+  "data/images/pacman-3D/3.png",
+  "data/images/pacman-3D/4.png"
 ];
 let images_current1;
 let images_current2;
