@@ -71,13 +71,21 @@ document.addEventListener('DOMContentLoaded', function() {
     const targetId = this.dataset.target;
     const target = document.getElementById(targetId);
 
-    this.classList.toggle("rotate");
+    // Preserve any inline transform (e.g. translateX) and compose it with rotation.
+    if (!this.dataset.baseTransform) {
+      this.dataset.baseTransform = this.style.transform || "";
+    }
+    const baseTransform = this.dataset.baseTransform;
 
     if (target.classList.contains("show")) {
+      this.classList.remove("rotate");
+      this.style.transform = baseTransform;
       target.classList.remove("show");
       target.style.maxHeight = "0";
       target.style.opacity = "0";
     } else {
+      this.classList.add("rotate");
+      this.style.transform = `${baseTransform} rotate(180deg)`;
       target.classList.add("show");
       target.style.maxHeight = target.scrollHeight + "px";
       target.style.opacity = "1";
@@ -211,6 +219,18 @@ const images_pacman3D = [
   "data/images/pacman-3D/3.png",
   "data/images/pacman-3D/4.png"
 ];
+const images_evCharge = [
+  "data/images/web-app/EV%20Charge/Screenshot_1.png",
+  "data/images/web-app/EV%20Charge/Screenshot_2.png",
+  "data/images/web-app/EV%20Charge/Screenshot_3.png",
+  "data/images/web-app/EV%20Charge/Screenshot_4.png"
+];
+const images_elk = [
+  "data/images/web-app/ELK/Screenshot_1.png",
+  "data/images/web-app/ELK/Screenshot_2.png",
+  "data/images/web-app/ELK/Screenshot_3.png",
+  "data/images/web-app/ELK/Screenshot_4.png"
+];
 let images_current1;
 let images_current2;
 if (window.location.pathname.includes('projects-ai.html')) {
@@ -219,6 +239,9 @@ if (window.location.pathname.includes('projects-ai.html')) {
 } else if (window.location.pathname.includes('projects-graphic.html')) {
   images_current1 = images_pacman2D;
   images_current2 = images_pacman3D;
+} else if (window.location.pathname.includes('projects-web.html')) {
+  images_current1 = images_evCharge;
+  images_current2 = images_elk;
 } else {
   images_current1 = [];
   images_current2 = [];
@@ -311,6 +334,11 @@ window.addEventListener('load', function () {
     setTimeout(() => {
       window.location.href = 'projects-ai.html';
     }, 200); 
+  }
+    function delayedRedirectWeb() {
+    setTimeout(() => {
+      window.location.href = 'projects-web.html';
+    }, 200);
   }
     function delayedRedirectGraphic() {
     setTimeout(() => {
